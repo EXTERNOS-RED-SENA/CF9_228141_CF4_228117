@@ -37,79 +37,79 @@ export default {
     return {
       glosarioData: [
         {
-          termino: 'Abstracción',
+          termino: 'Algoritmo',
           significado:
-            'Proceso de identificar características esenciales de un objeto, ignorando los detalles no relevantes',
+            'Secuencia de pasos lógicos y bien definidos para resolver un problema o realizar una tarea.',
         },
         {
-          termino: 'Clase',
+          termino: 'Analítica de Datos',
           significado:
-            'Plantilla o modelo que define las propiedades y comportamientos de un tipo de objeto',
+            'Proceso de examinar, limpiar, transformar y modelar datos para descubrir información útil y apoyar la toma de decisiones.',
         },
         {
-          termino: 'Composición',
+          termino: 'API (<i>Application Programming Interface</i>)',
           significado:
-            'Relación fuerte entre clases donde una clase contiene a otra y es responsable de su ciclo de vida',
+            'Conjunto de reglas y protocolos que permiten que diferentes aplicaciones se comuniquen entre sí.',
         },
         {
-          termino: 'Encapsulamiento',
+          termino: '<i>Big Data</i>',
           significado:
-            'Principio que oculta los detalles internos de una clase y expone solo lo necesario',
+            'Conjuntos de datos extremadamente grandes y complejos que superan la capacidad de las herramientas de procesamiento tradicionales.',
         },
         {
-          termino: 'Herencia',
+          termino: 'Datos estructurados',
           significado:
-            'Mecanismo que permite a una clase heredar propiedades y métodos de otra clase',
+            'Datos que siguen un formato predefinido y se organizan fácilmente en bases de datos relacionales.',
         },
         {
-          termino: 'Interfaz',
+          termino: 'Datos no estructurados',
           significado:
-            'Contrato que especifica qué métodos debe implementar una clase',
+            'Datos que no siguen un formato predefinido, como texto libre, imágenes o videos.',
         },
         {
-          termino: 'Método',
+          termino: 'ETL (<i>Extract, Transform, Load</i>)',
           significado:
-            'Función que define el comportamiento de los objetos de una clase',
+            'Proceso de extracción, transformación y carga de datos desde múltiples fuentes a un almacén de datos.',
         },
         {
-          termino: 'Objeto',
+          termino: 'Hadoop',
           significado:
-            'Instancia específica de una clase que contiene datos y comportamiento',
+            '<em>Framework</em> de <em>software</em> de código abierto para almacenar y procesar grandes conjuntos de datos en <i>clusters</i> de computadoras.',
         },
         {
-          termino: 'Patrón de Diseño',
+          termino: '<i>Insights</i>',
           significado:
-            'Solución reutilizable a un problema común en el diseño de <em>software</em>',
+            'Descubrimientos o comprensiones significativas extraídas del análisis de grandes volúmenes de datos. Estos hallazgos revelan patrones, tendencias o relaciones ocultas que permiten a las organizaciones tomar decisiones informadas y estratégicas para mejorar sus operaciones, productos o servicios.',
         },
         {
-          termino: 'Polimorfismo',
+          termino: '<i>Machine learning</i>',
           significado:
-            'Capacidad de un objeto para tomar diferentes formas y responder de manera distinta al mismo mensaje',
+            'Rama de la inteligencia artificial que se centra en el desarrollo de algoritmos que pueden «aprender» de los datos y hacer predicciones.',
         },
         {
-          termino: 'Principios SOLID',
+          termino: 'NoSQL',
           significado:
-            'Conjunto de cinco principios fundamentales para el diseño orientado a objetos',
+            'Sistemas de gestión de bases de datos que proporcionan un mecanismo para almacenar y recuperar datos modelados de formas diferentes a las tablas relacionales.',
         },
         {
-          termino: 'Refactorización',
+          termino: 'Python',
           significado:
-            'Proceso de reestructurar código existente sin cambiar su comportamiento externo',
+            'Lenguaje de programación de alto nivel, interpretado y de propósito general, ampliamente utilizado en análisis de datos y <i>machine learning</i>.',
         },
         {
-          termino: 'UML',
+          termino: 'R',
           significado:
-            'Lenguaje Unificado de Modelado, utilizado para visualizar y documentar sistemas de <em>software</em>',
+            'Lenguaje de programación y entorno de software libre para computación estadística y gráficos.',
         },
         {
-          termino: 'Visibilidad',
+          termino: 'SQL (<i>Structured Query Language</i>)',
           significado:
-            'Nivel de acceso que tienen otros objetos a los miembros de una clase',
+            'Lenguaje estándar para gestionar y consultar bases de datos relacionales.',
         },
         {
-          termino: 'CASE',
+          termino: 'Visualización de datos',
           significado:
-            'Herramientas de Ingeniería de <em>Software</em> Asistida por Computadora para el diseño y modelado',
+            'Representación gráfica de información y datos para facilitar la comprensión y el análisis.',
         },
       ],
     }

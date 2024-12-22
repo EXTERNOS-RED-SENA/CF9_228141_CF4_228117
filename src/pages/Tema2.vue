@@ -1,427 +1,362 @@
-<template lang="pug">
-.curso-main-container.pb-3
-  BannerInterno
-  .container.tarjeta.tarjeta--blanca.p-4.p-md-5.mb-5
-    .titulo-principal.color-acento-contenido
-      .titulo-principal__numero
-        span 2
-      h1 Principios de diseño orientado a objetos
-    .row.justify-content-center.align-items-center.mb-5
-      .col-lg-4.col-7.mb-lg-0.mb-3: img(src='@/assets/curso/temas/10.png', alt='')
-      .col-lg-8
-        .p-5(style="background-color: #E6F0FC ")
-          p.mb-0 El diseño orientado a objetos representa una forma de pensar sobre el software que refleja nuestra comprensión natural del mundo. En este capítulo, exploraremos los principios fundamentales que nos permiten crear sistemas que no solo funcionan, sino que son flexibles, mantenibles y escalables a lo largo del tiempo.
-    Separador 
-    #t_2_1.titulo-segundo.color-acento-contenido(data-aos='fade-right')
-      h2 2.1 Herencia y polimorfismo
-    div(style="background-color: #EDE9EC")
-      .row.justify-content-center.align-items-center.mb-5
-        .col-lg-8.mb-lg-0.mb-3
-          .p-5 
-            p.mb-0 La herencia es un concepto fundamental que refleja las relaciones naturales entre entidades. Pensemos en una biblioteca moderna: tiene diferentes tipos de recursos como libros, revistas, materiales audiovisuales y recursos digitales. Aunque cada uno es único, todos comparten características comunes: un identificador, un título, un sistema de préstamo y un estado de disponibilidad.
-        .col-lg-4.d-none.d-lg-block: img(src='@/assets/curso/temas/11.png', alt='')
-    p.mb-4 En este contexto, podríamos tener un recurso genérico de biblioteca del cual heredan tipos más específicos. Por ejemplo:
-    .row.justify-content-center.mb-5
-      .col-lg-4.mb-lg-0.mb-3
-        .tarjeta.hover.shadow.p-5.h-100
-          .row.justify-content-center.mb-3
-            .col-5: img(src='@/assets/curso/temas/14.svg', alt='')
-          p.mb-0.text-center Un libro hereda todas las características básicas de un recurso, pero añade propiedades como ISBN, número de páginas y ubicación física.
-      .col-lg-4.mb-lg-0.mb-3
-        .tarjeta.hover.shadow.p-5.h-100
-          .row.justify-content-center.mb-3
-            .col-5: img(src='@/assets/curso/temas/15.svg', alt='')
-          p.mb-0.text-center Un recurso digital hereda las características básicas, pero incluye URL, formato de archivo y requisitos de #[em software].
-      .col-lg-4.mb-lg-0.mb-3
-        .tarjeta.hover.shadow.p-5.h-100
-          .row.justify-content-center.mb-3
-            .col-5: img(src='@/assets/curso/temas/16.svg', alt='')
-          p.mb-0.text-center Una revista hereda lo básico y agrega volumen, número y periodicidad.
-    p.mb-5(data-aos='fade-right') El polimorfismo nos permite tratar todos estos recursos de manera uniforme cuando es necesario (por ejemplo, para prestarlos o devolverlos), pero también de forma específica cuando requerimos funcionalidades particulares. Un ejemplo práctico sería el sistema de notificaciones de vencimiento:
-    .row.justify-content-center.align-items-center.mb-5
-      .col-lg-6.col-7.mb-lg-0.mb-3: img.p-5(src='@/assets/curso/temas/17.svg', alt='')
-      .col-lg-6
-        .tarjeta-codigo.overflow-hidden(style="background-color: #110628 ;border-radius: 10px")
-          .tarjeta-codigo.p-3.mb-3(style="background-color: #3A1D71"): img.ms-4(src='@/assets/curso/temas/botones.svg', alt='' style="width: 94px ")
-          .p-4
-            code(style="color: white ").fst-italic class RecursoBiblioteca:
-              br
-              |def notificar_vencimiento(self):
-              br
-              |# Comportamiento básico
-              br
-              |pass
-              br
-              br
-              |class LibroFisico(RecursoBiblioteca):
-              br
-              |def notificar_vencimiento(self):
-              br
-              |# Incluye ubicación física para devolución
-              br
-              |pass
-              br
-              br
-              |class RecursoDigital(RecursoBiblioteca):
-              br
-              |def notificar_vencimiento(self):
-              br
-              |# Incluye enlace para renovación en línea
-              br
-              |pass
-    Separador
-    #t_2_2.titulo-segundo.color-acento-contenido(data-aos='fade-right')
-      h2 2.2 Composición y agregación
-    p.mb-4 La composición y la agregación representan diferentes tipos de relaciones entre objetos. Para entender mejor estos conceptos, analicemos algunos ejemplos del mundo real:
-    .mn.bg-slyder.p-5.mb-5
-      .tarjeta.p-5.bg-white
-        SlyderA(tipo='b')
-          .row
-            .col-lg-6.mb-4.mb-lg-0
-              h4 Composición (relación fuerte "es parte de")
-              ul.lista-ul--color
-                li.d-flex
-                  i.fas.fa-check-circle(style="color: #1169E3")
-                  p.mb-0 #[b Un automóvil y su motor:] el motor es una parte integral del automóvil y no tiene sentido por sí solo.
-                li.d-flex
-                  i.fas.fa-check-circle(style="color: #1169E3")
-                  p.mb-0 #[b Una casa y sus habitaciones:] las habitaciones no existen independientemente de la casa.
-                li.d-flex
-                  i.fas.fa-check-circle(style="color: #1169E3")
-                  p.mb-0 #[b Un #[em smartphone] y su batería integrada:] la batería es un componente esencial que forma parte del diseño del dispositivo.
-            .col-lg-6.col-7
-              figure
-                img(src='@/assets/curso/temas/18.png', alt='Texto que describa la imagen')
-          .row
-            .col-lg-6.mb-4.mb-lg-0
-              h4 Agregación (relación débil "tiene un")
-              ul.lista-ul--color
-                li.d-flex
-                  i.fas.fa-check-circle(style="color: #1169E3")
-                  p.mb-0 #[b Una universidad y sus estudiantes:] Los estudiantes pueden existir independientemente de la universidad.
-                li.d-flex
-                  i.fas.fa-check-circle(style="color: #1169E3")
-                  p.mb-0 #[b Una biblioteca y sus libros:] Los libros pueden transferirse a otras bibliotecas sin perder su identidad.
-                li.d-flex
-                  i.fas.fa-check-circle(style="color: #1169E3")
-                  p.mb-0 #[b Un equipo deportivo y sus jugadores:] Los jugadores pueden cambiar de equipo manteniendo su identidad individual.
-            .col-lg-6.col-7
-              figure
-                img(src='@/assets/curso/temas/18.png', alt='Texto que describa la imagen')
-    .titulo-sexto.color-acento-contenido(data-aos='fade-right')
-      h5 Figura 1.
-      span Relaciones comunes entre clases u objetos en la POO
-    img(src='@/assets/curso/temas/20.png', alt='La Figura 1 se denomina «Relaciones comunes entre clases u objetos en la POO». Ilustra tres tipos principales de relaciones entre objetos o clases en POO: herencia, composición y agregación, cada relación se presenta con un ejemplo y una explicación.').mb-3
-    figcaption Fuente: OIT, 2024.
-    Separador
-    #t_2_3.titulo-segundo.color-acento-contenido(data-aos='fade-right')
-      h2 2.3 Principios SOLID en POO
-    p.mb-4 Los principios SOLID son fundamentales para crear sistemas robustos y mantenibles. Veamos cada uno con ejemplos prácticos del mundo real:
-    .row.justify-content-center.mb-5
-      .col-lg-4.d-none.d-lg-block: img(src='@/assets/curso/temas/21.png', alt='')
-      .col-lg-8
-        AcordionA.mb-5(tipo="a" clase-tarjeta="tarjeta tarjeta--azul")
-          div(titulo="Principio de Responsabilidad Única (S)")
-            p.mb-4  Imagine un sistema de gestión de restaurante. En lugar de tener una clase gigante "Restaurante" que maneje todo, podríamos tener:
-            ul.lista-ul--color
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 GestorPedidos: maneja la toma y seguimiento de pedidos.
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 GestorInventario: controla el stock de ingredientes.
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 GestorPersonal: administra horarios y turnos.
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 GestorFacturación: maneja pagos y cuentas.
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 GestorMesas: administra reservas y disposición.
-            p.mb-0 Cada clase tiene una única responsabilidad y una sola razón para cambiar. Por ejemplo, si cambia el sistema de reservas, solo necesitamos modificar GestorMesas.
-          div(titulo="Principio Abierto/Cerrado (O)")
-            p.mb-4 Considere un sistema de cálculo de seguros de vehículos. En lugar de modificar el código existente cada vez que se añade un nuevo tipo de vehículo, podemos tener:
-            ul.lista-ul--color
-                li.d-flex
-                  i.fas.fa-check-circle(style="color: #1169E3")
-                  p.mb-0 class CalculadoraSeguro:
-                    br
-                    |def calcular_prima(self, vehiculo):
-                    br
-                    |return vehiculo.calcular_factor_riesgo() * self.prima_base
-            p.mb-0 Así, podemos añadir nuevos tipos de vehículos (motos, camiones, vehículos eléctricos) sin modificar la lógica existente.
-          div(titulo="Principio de Sustitución de Liskov (L)")
-            p.mb-4 En una aplicación de banca en línea, cualquier tipo de cuenta bancaria (ahorro, corriente, plazo fijo) debe poder usarse donde se espera una cuenta genérica. Por ejemplo, todas deben poder:
-            ul.lista-ul--color
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Mostrar saldo.
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Recibir depósitos.
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Procesar retiros (con sus reglas específicas).
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Generar estados de cuenta.
-    .row.justify-content-center.mb-5
-      .col-lg-8.mb-lg-0.mb-3
-        AcordionA.mb-5(tipo="a" clase-tarjeta="tarjeta tarjeta--azul")
-          div(titulo="Principio de Segregación de Interfaces (I)")
-            p.mb-4 En un sistema de dispositivos IoT (Internet de las Cosas), diferentes dispositivos tienen diferentes capacidades. En lugar de una interfaz única grande, podríamos tener interfaces específicas:
-            ul.lista-ul--color
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 DispositivoConectado (conexión básica).
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 DispositivoControlable (puede ser encendido/apagado).
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 DispositivoMonitoreable (envía datos de estado).
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 DispositivoProgramable (puede recibir configuraciones).
-            p.mb-0 Un termostato inteligente podría implementar todas estas interfaces, mientras que un sensor de temperatura simple solo implementaría DispositivoConectado y DispositivoMonitoreable.
-          div(titulo="Principio de Inversión de Dependencias (D)")
-            p.mb-4 En un sistema de comercio electrónico, el procesamiento de pagos debe ser flexible para admitir diferentes proveedores. En lugar de que el sistema dependa directamente de PayPal o Stripe, podría depender de una interfaz de procesamiento de pagos:
-            .tarjeta-codigo.overflow-hidden.mb-4(style="background-color: #110628 ;border-radius: 10px")
-              .tarjeta-codigo.p-3.mb-3(style="background-color: #3A1D71"): img.ms-4(src='@/assets/curso/temas/botones.svg', alt='' style="width: 94px ")
-              .p-4
-                code(style="color: white ").fst-italic class ProcesadorPagos:
-                  br
-                  |def __init__(self, proveedor_pago):
-                  br
-                  |self.proveedor = proveedor_pago
-                  br
-                  br
-                  |def procesar(self, monto, datos):
-                  br
-                  |return self.proveedor.realizar_pago(monto, datos)
-            p.mb-4 La aplicación práctica de estos principios lleva a sistemas que son:
-            ul.lista-ul--color
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Más fáciles de entender y mantener.
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Más adaptables a cambios en los requisitos.
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Más fáciles de probar y depurar.
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Más reutilizables y modulares.
-            p.mb-4 Por ejemplo, una aplicación de #[em delivery] de comida que sigue estos principios podría fácilmente:
-            ul.lista-ul--color
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Añadir nuevos métodos de pago sin afectar el sistema existente.
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Incorporar nuevos tipos de entregas (#[em drone], bicicleta, moto).
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Modificar el sistema de calificaciones sin afectar otras funcionalidades.
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Agregar nuevos proveedores de mapas y rutas
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Implementar diferentes estrategias de precios y promociones
-      .col-lg-4.col-7: img(src='@/assets/curso/temas/23.png', alt='')
-    p.mb-4 La clave está en identificar las abstracciones correctas y las relaciones naturales entre los objetos del sistema. En el próximo capítulo, veremos cómo estos conceptos se traducen en diagramas UML y cómo podemos utilizar herramientas CASE para diseñar sistemas orientados a objetos efectivos.
-    Separador
-    #t_2_4.titulo-segundo.color-acento-contenido(data-aos='fade-right')
-      h2 2.4 Del diseño a la implementación: consideraciones prácticas
-    p.mb-4 La aplicación de estos principios en el mundo real requiere un balance entre la teoría y la practicidad. Veamos algunos escenarios comunes y cómo abordarlos:
-    .row.justify-content-center.mb-5
-      .col-lg-4.d-none.d-lg-block: img(src='@/assets/curso/temas/22.png', alt='')
-      .col-lg-8
-        AcordionA.mb-5(tipo="a" clase-tarjeta="tarjeta tarjeta--azul")
-          div(titulo="Escenario 1: Sistema de gestión hospitalaria")
-            p.mb-4 Imagine un sistema de gestión de restaurante. En lugar de tener una clase gigante "Restaurante" que maneje todo, podríamos tener:
-            ul.lista-ul--color
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Personal Médico (clase base)
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Médicos especialistas
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Enfermeros
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Técnicos de laboratorio
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Farmacéuticos
-            p.mb-4 Cada tipo de personal comparte características básicas (nombre, ID, horarios) pero tiene responsabilidades específicas. Por ejemplo, todos pueden "atender pacientes", pero la implementación específica varía según el rol:
-            ul.lista-ul--color
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Un médico realiza diagnósticos y prescribe tratamientos
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Un enfermero administra medicamentos y monitorea signos vitales
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Un técnico de laboratorio realiza pruebas y análisis
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Un farmacéutico dispensa medicamentos y verifica interacciones
-          div(titulo="Escenario 2: plataforma de <em>Streaming</em>")
-            p.mb-4 Una plataforma de streaming multimedia demuestra perfectamente la composición y agregación:
-            .ms-4: p.fw-bold.mb-3 Composición:
-            ul.lista-ul--color
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Un perfil de usuario y sus preferencias
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Una lista de reproducción y sus elementos
-              li.d-flex 
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Un sistema de recomendaciones y sus algoritmos
-            .ms-4: p.fw-bold.mb-3 Agregación:
-            ul.lista-ul--color
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Una biblioteca y su contenido multimedia
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Un usuario y sus dispositivos registrados
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Un grupo familiar y sus miembros
-
-
-          div(titulo="Aplicando SOLID en situaciones reales")
-            p.mb-4 Ejemplo: Sistema de Notificaciones
-              br
-              br
-              | Un sistema de notificaciones bien diseñado podría manejar múltiples canales de comunicación:
-              br
-              br
-              | Situación inicial:
-            ul.lista-ul--color
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Los usuarios reciben notificaciones solo por email
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Evolución del sistema:
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Se añade notificación por SMS.
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Se integra notificación #[em push] para móviles.
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Se incorpora mensajería instantánea.
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0  Se añade soporte para notificaciones en redes sociales.
-            p.mb-0 Un diseño que sigue los principios SOLID permite esta evolución sin modificar el código existente, simplemente añadiendo nuevas implementaciones de la interfaz de notificación.
-          div(titulo="Desafíos comunes y soluciones")
-            h5 Herencia profunda:
-            p.mb-4 Un sistema de notificaciones bien diseñado podría manejar múltiples canales de comunicación:
-
-            ul.lista-ul--color
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Problema: Jerarquías de clases demasiado profundas que son difíciles de mantener.
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Solución: Favorecer la composición sobre la herencia cuando sea posible.
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Ejemplo: En lugar de crear una jerarquía profunda de tipos de vehículos, usar composición con características como tipo de motor, sistema de transmisión, etc.
-            h5 Acoplamiento excesivo:
-            ul.lista-ul--color
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Problema: clases que dependen demasiado de los detalles de implementación de otras.
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Solución: usar interfaces y abstracciones.
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Ejemplo: un sistema de pagos que puede cambiar fácilmente entre diferentes proveedores de servicios.
-            h5 Clases God:
-            ul.lista-ul--color
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Problema: Clases que intentan hacer demasiado. 
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Solución: Aplicar el principio de responsabilidad única. 
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Ejemplo: Separar una clase "Pedido" monolítica en componentes más específicos como "GestorPedido", "CalculadorPrecio", "ValidadorInventario".
-            h5 Patrones de implementación efectivos
-            p.mb-3 Patrón #[em Observer] para notificaciones:
-              br
-              |Sistema de Biblioteca:
-            ul.lista-ul--color
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Cuando un libro se devuelve:
-                  br
-                  |- Notifica a usuarios en lista de espera.
-                  br
-                  |- Actualiza el inventario.
-                  br
-                  |- Registra la transacción.
-            p.mb-3 Patrón #[em Strategy] para reglas de negocio variables:
-            p.mb-0 Sistema de Descuentos:
-              br
-              | - Descuentos por temporada.
-              br
-              |- Descuentos por volumen.
-              br
-              |- Descuentos por fidelidad.
-              br
-              |- Promociones especiales.
-          div(titulo="Mejores prácticas en el diseño orientado a objetos")
-            h5 Mantener la cohesión alta:
-            ul.lista-ul--color
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Cada clase debe tener un propósito claro y bien definido.
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Los métodos dentro de una clase deben estar relacionados.
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Ejemplo: Una clase "Factura" que maneja solo aspectos relacionados con la facturación.
-            h5 Mantener el acoplamiento bajo:
-            ul.lista-ul--color
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Minimizar las dependencias entre clases.
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Usar interfaces para comunicación entre componentes.
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Ejemplo: Un sistema de reportes que puede funcionar con diferentes fuentes de datos.
-            h5 Diseñar para el cambio:
-            ul.lista-ul--color
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Identificar las partes del sistema que son más propensas a cambiar.
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Encapsular esas partes detrás de interfaces estables.
-              li.d-flex
-                i.fas.fa-check-circle(style="color: #1169E3")
-                p.mb-0 Ejemplo: Un sistema de autenticación que puede adaptarse a diferentes proveedores de identidad.
-            p.mb-0 La aplicación efectiva de estos principios y patrones requiere práctica y experiencia. Es importante recordar que el objetivo final es crear software que no solo funcione correctamente, sino que también sea fácil de mantener, modificar y extender a lo largo del tiempo. En el próximo capítulo, exploraremos cómo estos conceptos se traducen en diagramas UML y cómo podemos utilizar herramientas CASE para visualizar y documentar nuestros diseños orientados a objetos.
+<template>
+  <div class="curso-main-container pb-3">
+    <BannerInterno></BannerInterno>
+    <div class="container tarjeta tarjeta--blanca p-4 p-md-5 mb-5">
+      <div class="titulo-principal color-acento-contenido">
+        <div class="titulo-principal__numero"><span>1</span></div>
+        <h1>Introducción al <i>Big Data</i></h1>
+      </div>
+      <p>
+        En este capítulo inicial, se introduce el concepto fundamental del
+        <i>Big Data</i> y su papel transformador en la sociedad contemporánea.
+        Se exploran las características distintivas que definen al
+        <i>Big Data</i>, conocidas como las «5 V», y se examina cómo este
+        fenómeno está revolucionando la forma en que organizaciones y personas
+        toman decisiones en diversos sectores.
+      </p>
+      <Separador> </Separador>
+      <div id="t_1_1" class="titulo-segundo color-acento-contenido">
+        <h2>1.1 Definición y características del <i>Big Data</i></h2>
+      </div>
+      <div class="row bg3 align-items-center mb-5">
+        <div class="col-lg-12 col-12 px-lg-5 px-4">
+          <div class="row justify-content-center align-items-center">
+            <div class="col-lg-12">
+              <div class="row justify-content-center mb-4">
+                <div class="col-lg-8 my-lg-0 my-3">
+                  <p>
+                    El término <i>Big Data</i> se refiere a conjuntos de datos
+                    extremadamente grandes y complejos que superan la capacidad
+                    de las herramientas de procesamiento de datos tradicionales.
+                    Estos conjuntos de datos se caracterizan por lo que se
+                    conocen como las «5 V»:
+                  </p>
+                  <ul class="lista-ul fa-ul">
+                    <li>
+                      <i class="fas fa-check v1"></i
+                      ><span
+                        ><b>Volumen:</b> cantidades masivas de datos, que van
+                        desde terabytes hasta petabytes y más.</span
+                      >
+                    </li>
+                    <hr />
+                    <li>
+                      <i class="fas fa-check v1"></i
+                      ><span
+                        ><b>Velocidad:</b> la rapidez con la que se generan y
+                        procesan los datos.</span
+                      >
+                    </li>
+                    <hr />
+                    <li>
+                      <i class="fas fa-check v1"></i
+                      ><span
+                        ><b>Variedad:</b> diversos tipos de datos estructurados,
+                        semiestructurados y no estructurados.</span
+                      >
+                    </li>
+                    <hr />
+                    <li>
+                      <i class="fas fa-check v1"></i
+                      ><span
+                        ><b>Veracidad:</b> la confiabilidad y precisión de los
+                        datos.</span
+                      >
+                    </li>
+                    <hr />
+                    <li>
+                      <i class="fas fa-check v1"></i
+                      ><span
+                        ><b>Valor:</b> la capacidad de convertir los datos en
+                        información útil para la toma de decisiones.</span
+                      >
+                    </li>
+                    <hr />
+                  </ul>
+                </div>
+                <div class="col-lg-4 my-lg-0 my-3">
+                  <img
+                    class="img-a img-t"
+                    src="@/assets/curso/temas/4.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div
+                class="bloque-texto-g bloque-texto-g--inverso color-secundario p-3 p-sm-4 p-md-5"
+              >
+                <div
+                  class="bloque-texto-g__img"
+                  :style="{
+                    'background-image': `url(${require('@/assets/curso/temas/6.png')})`,
+                  }"
+                ></div>
+                <div class="bloque-texto-g__texto p-4">
+                  <p class="mb-0">
+                    La siguiente tabla ilustra las diferencias clave entre el
+                    análisis de datos tradicional y el <i>Big Data</i>,
+                    destacando la evolución en la capacidad de procesamiento y
+                    gestión de la información. Mientras que el análisis
+                    tradicional se enfoca en volúmenes menores de datos
+                    estructurados y procesados por lotes, el <i>Big Data</i> se
+                    caracteriza por su capacidad para manejar cantidades masivas
+                    de datos de diferentes tipos (estructurados,
+                    semiestructurados y no estructurados) en tiempo real. Esta
+                    evolución ha impulsado el desarrollo de nuevas tecnologías
+                    como Hadoop, Spark y bases de datos NoSQL, que permiten el
+                    análisis a gran escala y la extracción de información
+                    valiosa para la toma de decisiones.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="titulo-sexto color-acento-botones">
+            <h5>Tabla 1.</h5>
+            <span
+              >Principales estructuras de datos, casos de uso y
+              limitaciones.</span
+            >
+          </div>
+          <div class="tabla-a color-acento-botones mb-2">
+            <table>
+              <caption>
+                Fuente: OIT, 2024.
+              </caption>
+              <thead>
+                <tr>
+                  <th>Aspecto</th>
+                  <th>Análisis tradicional</th>
+                  <th class="fst-italic">Big Data</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Volumen de datos</td>
+                  <td><em>Gigabytes</em></td>
+                  <td><i>Terabytes</i> a <i>Petabytes</i></td>
+                </tr>
+                <tr>
+                  <td>Velocidad de procesamiento</td>
+                  <td>Por lotes (<i>batch</i>)</td>
+                  <td>En tiempo real</td>
+                </tr>
+                <tr>
+                  <td>Tipos de datos</td>
+                  <td>Principalmente estructurados</td>
+                  <td>Estructurados, semiestructurados y no estructurados</td>
+                </tr>
+                <tr>
+                  <td>Escalabilidad</td>
+                  <td>Vertical (mejor <i>hardware</i>)</td>
+                  <td>Horizontal (más nodos)</td>
+                </tr>
+                <tr>
+                  <td>Tecnología principal</td>
+                  <td>Bases de datos relacionales</td>
+                  <td>Hadoop, Spark, NoSQL</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <Separador> </Separador>
+      <div id="t_1_2" class="titulo-segundo color-acento-contenido">
+        <h2>1.2 Importancia en el mundo actual</h2>
+      </div>
+      <div class="row justify-content-center mb-4">
+        <div class="col-lg-5 my-lg-0 my-3">
+          <img class="img-a img-t" src="@/assets/curso/temas/7.png" alt="" />
+        </div>
+        <div class="col-lg-7 my-lg-0 my-3">
+          <p>
+            El <i>Big Data</i> ha revolucionado la forma en que las
+            organizaciones toman decisiones y operan en diversos sectores. En el
+            ámbito de los negocios, permite una mejor comprensión del
+            comportamiento del cliente, la optimización de operaciones y el
+            desarrollo de nuevos productos. En el sector salud, facilita la
+            medicina personalizada, la investigación de enfermedades y la mejora
+            de los sistemas de atención médica. A nivel gubernamental, el
+            <i>Big Data</i> ayuda en la planificación urbana, la seguridad
+            pública y la prestación de servicios eficientes. Finalmente, en el
+            campo científico, impulsa descubrimientos en áreas como la genómica,
+            la climatología y la física de partículas.
+          </p>
+        </div>
+      </div>
+      <div class="row bg3 align-items-center">
+        <div class="col-lg-12 col-12 px-lg-5 px-4">
+          <div class="row justify-content-center align-items-center">
+            <div class="col-lg-12">
+              <Separador> </Separador>
+              <div id="t_1_3" class="titulo-segundo color-acento-contenido">
+                <h2>1.3 Procesos asociados al <i>Big Data</i></h2>
+              </div>
+              <p>
+                El manejo del <i>Big Data</i> implica varios procesos clave para
+                poder extraer información valiosa de grandes volúmenes de datos.
+              </p>
+              <div class="row justify-content-center mb-5">
+                <div class="col-lg-10">
+                  <div class="titulo-sexto color-acento-botones">
+                    <h5>Figura 1.</h5>
+                    <span>Ecosistema del <i>Big Data</i></span>
+                  </div>
+                  <div class="bgfig p-5 brad mb-2">
+                    <img
+                      class="img-a img-t"
+                      src="@/assets/curso/temas/8.svg"
+                      alt="La Figura 1 se denomina «Ecosistema del Big Data» y presenta un diagrama donde se observan en secuencia los cinco procesos clave del Big Data: recolección, almacenamiento, procesamiento, análisis y visualización."
+                    />
+                  </div>
+                  <figcaption>Fuente: OIT, 2024.</figcaption>
+                </div>
+              </div>
+              <div class="row justify-content-center">
+                <div class="col-lg-4 my-3">
+                  <img
+                    class="img-a img-t"
+                    src="@/assets/curso/temas/9.png"
+                    alt=""
+                  />
+                </div>
+                <div class="col-lg-8 my-3">
+                  <CarouselCard class="mb-2" columnas="col-lg-12">
+                    <div class="bg4 brad1 p-4 h-100">
+                      <img
+                        class="img-t mb-2"
+                        src="@/assets/curso/temas/10.svg"
+                        alt=""
+                      />
+                      <p class="mb-0">
+                        En primer lugar, la recolección se encarga de capturar
+                        datos de diversas fuentes, como sensores, redes
+                        sociales, transacciones online, etc. Estos datos pueden
+                        ser estructurados (como tablas de bases de datos) o no
+                        estructurados (como texto, imágenes y videos).
+                      </p>
+                    </div>
+                    <div class="bg5 brad1 p-4 h-100">
+                      <img
+                        class="img-t mb-2"
+                        src="@/assets/curso/temas/10.svg"
+                        alt=""
+                      />
+                      <p class="mb-0">
+                        Una vez recopilados, los datos deben ser almacenados de
+                        forma eficiente. Para ello, se utilizan sistemas
+                        distribuidos y bases de datos NoSQL, que permiten
+                        manejar grandes volúmenes de información de manera
+                        escalable y flexible.
+                      </p>
+                    </div>
+                    <div class="bg4 brad1 p-4 h-100">
+                      <img
+                        class="img-t mb-2"
+                        src="@/assets/curso/temas/10.svg"
+                        alt=""
+                      />
+                      <p class="mb-0">
+                        El siguiente paso es el procesamiento de los datos, que
+                        implica la aplicación de técnicas de procesamiento
+                        paralelo y distribuido para transformarlos en un formato
+                        adecuado para el análisis. Esto puede incluir la
+                        limpieza de datos, la transformación de formatos y la
+                        agregación de información.
+                      </p>
+                    </div>
+                    <div class="bg5 brad1 p-4 h-100">
+                      <img
+                        class="img-t mb-2"
+                        src="@/assets/curso/temas/10.svg"
+                        alt=""
+                      />
+                      <p class="mb-0">
+                        Posteriormente, se realiza el análisis de los datos,
+                        empleando técnicas avanzadas como el aprendizaje
+                        automático y la inteligencia artificial para identificar
+                        patrones, tendencias y anomalías. Este análisis permite
+                        obtener <i>insights</i> representativos para la toma de
+                        decisiones.
+                      </p>
+                    </div>
+                    <div class="bg4 brad1 p-4 h-100">
+                      <img
+                        class="img-t mb-2"
+                        src="@/assets/curso/temas/10.svg"
+                        alt=""
+                      />
+                      <p class="mb-0">
+                        Finalmente, los resultados del análisis se presentan
+                        mediante visualizaciones gráficas que facilitan la
+                        comprensión de la información. Estas visualizaciones
+                        pueden incluir gráficos, mapas, dashboards, etc., que
+                        permiten comunicar los hallazgos de forma clara y
+                        concisa.
+                      </p>
+                    </div>
+                    <div class="bg5 brad1 p-4 h-100">
+                      <img
+                        class="img-t mb-2"
+                        src="@/assets/curso/temas/10.svg"
+                        alt=""
+                      />
+                      <p class="mb-0">
+                        Conviene recordar que el <i>Big Data</i> ha transformado
+                        la forma en que se maneja y analiza la información en la
+                        actualidad, generando nuevas oportunidades y desafíos en
+                        múltiples campos de la actividad humana a medida que se
+                        avanza en la era digital. La capacidad de aprovechar el
+                        <i>Big Data</i> de manera efectiva se ha convertido en
+                        una habilidad clave para profesionales y organizaciones,
+                        permitiéndoles extraer <i>insights</i> valiosos y útiles
+                        de grandes cantidades de datos desestructurados y
+                        complejos. Esta habilidad es esencial para tomar
+                        decisiones informadas y estratégicas en diversas
+                        industrias, como la salud, la educación, las finanzas y
+                        el marketing.
+                      </p>
+                    </div>
+                    <div class="bg4 brad1 p-4 h-100">
+                      <img
+                        class="img-t mb-2"
+                        src="@/assets/curso/temas/10.svg"
+                        alt=""
+                      />
+                      <p class="mb-0">
+                        No obstante, lo anterior, también se plantean desafíos,
+                        como la necesidad de contar con expertos/as en análisis
+                        de datos y la preocupación por la privacidad y la
+                        seguridad de los datos. Por lo tanto, es fundamental que
+                        los profesionales y las organizaciones inviertan en el
+                        desarrollo de habilidades y tecnologías para aprovechar
+                        el potencial del <i>Big Data</i> y enfrentar los
+                        desafíos que plantea. Para aquellos/as que inician en el
+                        estudio de los temas relacionados con el
+                        <i>Big Data</i>, se recomienda seguir aprendiendo sobre
+                        matemáticas, estadística y programación, ya que estas
+                        habilidades son fundamentales para el análisis de datos.
+                        Además, es importante estar al tanto de las últimas
+                        tendencias y herramientas en el campo del
+                        <i>Big Data</i>, y tener una mentalidad analítica y
+                        curiosa para poder encontrar nuevas posibilidades y
+                        miradas sobre los datos.
+                      </p>
+                    </div>
+                  </CarouselCard>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>

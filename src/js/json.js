@@ -15,22 +15,22 @@ export default {
       {
         nombreRuta: 'tema1',
         numero: '1',
-        titulo: 'Fundamentos de la Programación Orientada a Objetos	',
+        titulo: 'Introducción al <i>Big Data</i>',
         desarrolloContenidos: true,
         subMenu: [
           {
             numero: '1.1',
-            titulo: 'Introducción al paradigma orientado a objetos	',
+            titulo: 'Definición y características del <i>Big Data</i>',
             hash: 't_1_1',
           },
           {
             numero: '1.2',
-            titulo: 'Clases y objetos: conceptos básicos	',
+            titulo: 'Importancia en el mundo actual',
             hash: 't_1_2',
           },
           {
             numero: '1.3',
-            titulo: 'Atributos, métodos y encapsulamiento',
+            titulo: 'Procesos asociados al <i>Big Data</i>',
             hash: 't_1_3',
           },
         ],
@@ -39,74 +39,199 @@ export default {
       {
         nombreRuta: 'tema2',
         numero: '2',
-        titulo: 'Principios de diseño orientado a objetos	',
+        titulo: 'Fundamentos de programación',
         desarrolloContenidos: true,
         subMenu: [
           {
             numero: '2.1',
-            titulo: 'Herencia y polimorfismo	',
+            titulo: 'Concepto de algoritmo',
             hash: 't_2_1',
           },
           {
             numero: '2.2',
-            titulo: 'Composición y agregación',
+            titulo: 'Variables y tipos de datos',
             hash: 't_2_2',
           },
           {
             numero: '2.3',
-            titulo: 'Principios SOLID en POO	',
+            titulo: 'Operadores',
             hash: 't_2_3',
           },
           {
             numero: '2.4',
-            titulo: 'Del diseño a la implementación: consideraciones prácticas	',
+            titulo: 'Estructuras de control de flujo',
             hash: 't_2_4',
+          },
+          {
+            numero: '2.5',
+            titulo: 'Arreglos',
+            hash: 't_2_5',
+          },
+          {
+            numero: '2.6',
+            titulo: 'Ficheros',
+            hash: 't_2_6',
+          },
+          {
+            numero: '2.7',
+            titulo: 'Funciones',
+            hash: 't_2_7',
           },
         ],
       },
       {
         nombreRuta: 'tema3',
         numero: '3',
-        titulo: 'Modelado y diseño UML	',
+        titulo: 'Lenguajes de Programación para analítica de datos',
         desarrolloContenidos: true,
         subMenu: [
           {
             numero: '3.1',
-            titulo: 'Diagramas de clases UML',
+            titulo: 'Introducción a R y Python',
             hash: 't_3_1',
           },
           {
             numero: '3.2',
-            titulo: 'Relaciones entre clases',
+            titulo: 'Antecedentes y evolución',
             hash: 't_3_2',
           },
           {
             numero: '3.3',
-            titulo: 'Herramientas CASE para modelado',
+            titulo: 'Entornos de desarrollo integrado (IDE)',
             hash: 't_3_3',
+          },
+          {
+            numero: '3.4',
+            titulo: 'Sintaxis y estructura general',
+            hash: 't_3_4',
+          },
+          {
+            numero: '3.5',
+            titulo: 'Estándares de código',
+            hash: 't_3_5',
+          },
+          {
+            numero: '3.6',
+            titulo: 'Aplicaciones en analítica de datos',
+            hash: 't_3_6',
+          },
+          {
+            numero: '3.7',
+            titulo: 'Generación de reportes',
+            hash: 't_3_7',
           },
         ],
       },
       {
         nombreRuta: 'tema4',
         numero: '4',
-        titulo: 'Patrones y arquitectura orientada a objetos',
+        titulo: 'Analítica de datos',
         desarrolloContenidos: true,
         subMenu: [
           {
             numero: '4.1',
-            titulo: 'Patrones de diseño fundamentales',
+            titulo: 'Introducción y conceptos básicos',
             hash: 't_4_1',
           },
           {
             numero: '4.2',
-            titulo: 'Arquitectura limpia con POO',
+            titulo: 'Técnicas de análisis de datos',
             hash: 't_4_2',
           },
           {
             numero: '4.3',
-            titulo: 'Implementación práctica de modelos',
+            titulo: 'Procesos en la analítica de datos',
             hash: 't_4_3',
+          },
+        ],
+      },
+      {
+        nombreRuta: 'tema5',
+        numero: '5',
+        titulo: 'Bases de Datos y SQL',
+        desarrolloContenidos: true,
+        subMenu: [
+          {
+            numero: '5.1',
+            titulo: 'Tipos de bases de datos',
+            hash: 't_5_1',
+          },
+          {
+            numero: '5.2',
+            titulo: 'Sentencias SQL fundamentales',
+            hash: 't_5_2',
+          },
+          {
+            numero: '5.3',
+            titulo: 'Procesos ETL (Extracción, Transformación y Carga)',
+            hash: 't_5_3',
+          },
+          {
+            numero: '5.4',
+            titulo: 'Optimización de bases de datos',
+            hash: 't_5_4',
+          },
+        ],
+      },
+      {
+        nombreRuta: 'tema6',
+        numero: '6',
+        titulo: 'Herramientas informáticas para analítica de datos',
+        desarrolloContenidos: true,
+        subMenu: [
+          {
+            numero: '6.1',
+            titulo: 'Instalación y configuración',
+            hash: 't_6_1',
+          },
+          {
+            numero: '6.2',
+            titulo: 'Clasificación y conversión de datos',
+            hash: 't_6_2',
+          },
+          {
+            numero: '6.3',
+            titulo: 'Transformación y ordenamiento',
+            hash: 't_6_3',
+          },
+          {
+            numero: '6.4',
+            titulo: 'Importación y exportación de datos',
+            hash: 't_6_4',
+          },
+          {
+            numero: '6.5',
+            titulo: 'Uso de expresiones regulares',
+            hash: 't_6_5',
+          },
+          {
+            numero: '6.6',
+            titulo: 'Manejo de funciones avanzadas',
+            hash: 't_6_6',
+          },
+          {
+            numero: '6.7',
+            titulo: 'Limpieza basada en similitudes',
+            hash: 't_6_7',
+          },
+          {
+            numero: '6.8',
+            titulo:
+              'Licencias: <i>software</i> comercial vs. <i>software</i> libre',
+            hash: 't_6_8',
+          },
+        ],
+      },
+      {
+        nombreRuta: 'tema7',
+        numero: '7',
+        titulo: 'Conclusiones y perspectivas futuras',
+        desarrolloContenidos: true,
+        subMenu: [
+          {
+            numero: '7.1',
+            titulo: 'Reflexiones finales y perspectivas futuras',
+            hash: 't_7_1',
           },
         ],
       },
@@ -142,7 +267,7 @@ export default {
       {
         icono: 'fas fa-file-pdf',
         titulo: 'Descargar PDF',
-        download: 'downloads/prueba.pdf',
+        download: 'downloads/228117_CF04_DU_V2.pdf',
       },
       {
         icono: 'fas fa-download',
@@ -157,24 +282,11 @@ export default {
     ],
   },
   global: {
-    Name: 'Programación orientada a objetos: conceptos y modelado',
+    Name: '<i>Big Data</i>: conceptos, técnicas y herramientas',
     Description:
-      'Este componente formativo aborda los fundamentos y prácticas de la programación orientada a objetos, explorando desde conceptos básicos hasta patrones de diseño avanzados. Cubre principios SOLID, modelado UML y arquitectura de software, proporcionando las herramientas necesarias para diseñar y desarrollar sistemas robustos y mantenibles bajo el paradigma orientado a objetos.',
+      'Este componente ofrece una introducción al mundo del <i>Big Data</i>, abarcando desde los fundamentos de programación hasta técnicas de análisis. Explora lenguajes como R y Python, analítica de datos, bases de datos relacionales y NoSQL, y herramientas informáticas esenciales. Dirigido a principiantes y técnicos, proporciona una fuente inicial en conceptos, métodos y aplicaciones prácticas del <i>Big Data</i>.',
     imagenBannerPrincipal: require('@/assets/curso/portada/banner-principal.png'),
     fondoBannerPrincipal: require('@/assets/curso/portada/fondo-banner-principal.png'),
-    imagenesDecorativasBanner: [
-      {
-        clases: ['banner-principal-decorativo-1', 'd-none', 'd-lg-block'],
-        imagen: require('@/assets/curso/portada/a1.png'),
-      },
-      {
-        clases: ['banner-principal-decorativo-2'],
-        imagen: require('@/assets/curso/portada/a2.png'),
-      },
-      {
-        clases: ['banner-principal-decorativo-3'],
-        imagen: require('@/assets/curso/portada/a3.png'),
-      },
-    ],
+    imagenesDecorativasBanner: [],
   },
 }

@@ -1,32 +1,76 @@
-<template lang="pug">
-.curso-main-container.pb-3
-  BannerInterno(icono="fas fa-sitemap" titulo="Síntesis")
-  .container.tarjeta.tarjeta--blanca.p-4.p-md-5
-    p.mb-5 El diagrama representa la estructura integral del componente sobre programación orientada a objetos, centrado en los conceptos y el modelado de #[em software] bajo este paradigma. Partiendo del concepto central de la POO, se ramifica en cuatro áreas esenciales: fundamentos de programación orientada a objetos, principios de diseño, modelado UML y patrones con arquitectura. Cada una de estas áreas incorpora subtemas específicos que conforman los elementos fundamentales para comprender y aplicar eficazmente el paradigma orientado a objetos en el desarrollo de #[em software.]
-    .row.justify-content-center.mb-5
-      .col-lg-3.col-7.mb-lg-0.mb-3: img(src='@/assets/curso/temas/36.png', alt='')
-      .col-lg-5.mb-lg-0.mb-3
-        .p-4(style="background-color: #E6F0FC")
-          p.mb-0 Esta organización ilustra el flujo lógico del aprendizaje y aplicación de la POO. Comienza con la comprensión de los conceptos fundamentales como clases, objetos y encapsulamiento, proporcionando una base sólida. Luego, profundiza en los principios de diseño, abordando la herencia, el polimorfismo y los principios SOLID, que son esenciales para crear #[em software] robusto y mantenible. A continuación, se enfoca en el modelado UML como herramienta para visualizar y documentar el diseño orientado a objetos. Finalmente, culmina con la aplicación práctica a través de patrones de diseño y arquitectura limpia.
-      .col-lg-4.col-7: img(src='@/assets/curso/temas/37.png', alt='')
-    .row.justify-content-center.mb-5
-      .col-lg-5.col-7.mb-lg-0.mb-3: img(src='@/assets/curso/temas/38.png', alt='')
-      .col-lg-7
-        .p-4.tarjeta.color-primario--borde.border-2.bg-white
-          p.mb-0 El diagrama funciona como una hoja de ruta visual para comprender la estructura y el alcance del componente, permitiendo al estudiante visualizar rápidamente la progresión del aprendizaje y las conexiones entre los diferentes temas. Los elementos transversales (diseño modular, reutilización y mantenibilidad) se entrelazan con todas las áreas, enfatizando su importancia continua en el desarrollo orientado a objetos. Se sugiere utilizarlo como referencia para organizar el estudio y entender cómo se integran los diversos aspectos en el desarrollo de #[em software] orientado a objetos, garantizando la creación de aplicaciones bien estructuradas y mantenibles. 
-
-    .row.justify-content-center
-      .col-lg-8.mb-5
-        figure
-          img(src="@/assets/curso/temas/sintesis.svg", alt="La Figura 3 se denomina «Síntesis temática del componente», es un mapa mental con el tema central “Programación orientada a objetos: conceptos y modelado, del cual se desprenden cuatro ramas principales —Fundamentos POO, principios diseño, modelado UML, patrones y arquitectura— cada una detallada con sus subtemas específicos.")
-    .row.justify-content-center.mb-5
-      .col-3
-        a.anexo.mb-5(:href="obtenerLink('/downloads/Sintesis.pdf')" target="_blank")
-          .anexo__icono
-            img(src="@/assets/bullets/icono-pdf.svg")
-          .anexo__texto
-            p Anexo. Síntesis
-
+<template>
+  <div class="curso-main-container pb-3">
+    <BannerInterno icono="fas fa-sitemap" titulo="Síntesis"></BannerInterno>
+    <div class="container tarjeta tarjeta--blanca p-4 p-md-5">
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-4 my-lg-0 my-3 j1">
+          <img class="img-fluid img-a" src="@/assets/curso/temas/3.png" />
+        </div>
+        <div class="col-lg-8 my-lg-0 my-3">
+          <div class="bg2 text-white p-3 brad j1 h-100">
+            <p>
+              El siguiente diagrama proporciona una visión general sintetizada
+              de los principales temas abordados en este componente sobre Big
+              Data. Este mapa está diseñado para ayudar al lector a visualizar
+              la interconexión entre los diversos componentes que conforman el
+              ecosistema del Big Data.
+            </p>
+            <p>
+              En el origen del diagrama se encuentra el concepto principal de
+              Big Data, del cual se ramifican aprendizajes fundamentales:
+              fundamentos de Programación, analítica de datos, bases de datos,
+              tipos y fuentes de datos, y herramientas informáticas. Cada una de
+              estas áreas se desglosa a su vez en subtemas clave, reflejando la
+              estructura y el contenido del componente.
+            </p>
+          </div>
+        </div>
+      </div>
+      <p class="mb-5">
+        Este diagrama sirve como una guía visual para navegar por los conceptos
+        presentados en el texto, permitiendo al lector comprender rápidamente la
+        amplitud y profundidad de los temas cubiertos, así como sus
+        interrelaciones. Al revisar este mapa, el aprendiz podrá apreciar cómo
+        los diferentes aspectos del Big Data se integran para formar un campo de
+        estudio cohesivo y multifacético. Se invita a explorar este diagrama
+        como un complemento al contenido detallado del componente, utilizándolo
+        como una referencia rápida y un recordatorio visual de conceptos clave
+        en el mundo del Big Data.
+      </p>
+      <div class="row justify-content-center">
+        <div class="col-lg-10 bgs p-4 brad">
+          <figure>
+            <img
+              class="img-a img-t"
+              src="@/assets/curso/temas/sintesis.svg"
+              alt="La Figura 5 se denomina «Síntesis temática del componente», allí se mencionan los principales temas tratados —como programación, bases de datos, analítica y herramientas— y algunos subtemas que los integran."
+            />
+          </figure>
+        </div>
+      </div>
+      <div class="row justify-content-center mt-2 mb-5">
+        <div class="col-lg-10">
+          <figcaption>Fuente: OIT, 2024.</figcaption>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-auto">
+          <a
+            class="anexo mb-5"
+            :href="obtenerLink('/downloads/Sintesis.pdf')"
+            target="_blank"
+          >
+            <div class="anexo__icono">
+              <img src="@/assets/bullets/icono-pdf.svg" />
+            </div>
+            <div class="anexo__texto">
+              <p>Anexo. Síntesis</p>
+            </div></a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
