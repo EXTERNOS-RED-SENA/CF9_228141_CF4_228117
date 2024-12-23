@@ -1,363 +1,293 @@
-<template>
-  <div class="curso-main-container pb-3">
-    <BannerInterno></BannerInterno>
-    <div class="container tarjeta tarjeta--blanca p-4 p-md-5 mb-5">
-      <div class="titulo-principal color-acento-contenido">
-        <div class="titulo-principal__numero"><span>1</span></div>
-        <h1>Introducción al <i>Big Data</i></h1>
-      </div>
-      <p>
-        En este capítulo inicial, se introduce el concepto fundamental del
-        <i>Big Data</i> y su papel transformador en la sociedad contemporánea.
-        Se exploran las características distintivas que definen al
-        <i>Big Data</i>, conocidas como las «5 V», y se examina cómo este
-        fenómeno está revolucionando la forma en que organizaciones y personas
-        toman decisiones en diversos sectores.
-      </p>
-      <Separador> </Separador>
-      <div id="t_1_1" class="titulo-segundo color-acento-contenido">
-        <h2>1.1 Definición y características del <i>Big Data</i></h2>
-      </div>
-      <div class="row bg3 align-items-center mb-5">
-        <div class="col-lg-12 col-12 px-lg-5 px-4">
-          <div class="row justify-content-center align-items-center">
-            <div class="col-lg-12">
-              <div class="row justify-content-center mb-4">
-                <div class="col-lg-8 my-lg-0 my-3">
-                  <p>
-                    El término <i>Big Data</i> se refiere a conjuntos de datos
-                    extremadamente grandes y complejos que superan la capacidad
-                    de las herramientas de procesamiento de datos tradicionales.
-                    Estos conjuntos de datos se caracterizan por lo que se
-                    conocen como las «5 V»:
-                  </p>
-                  <ul class="lista-ul fa-ul">
-                    <li>
-                      <i class="fas fa-check v1"></i
-                      ><span
-                        ><b>Volumen:</b> cantidades masivas de datos, que van
-                        desde terabytes hasta petabytes y más.</span
-                      >
-                    </li>
-                    <hr />
-                    <li>
-                      <i class="fas fa-check v1"></i
-                      ><span
-                        ><b>Velocidad:</b> la rapidez con la que se generan y
-                        procesan los datos.</span
-                      >
-                    </li>
-                    <hr />
-                    <li>
-                      <i class="fas fa-check v1"></i
-                      ><span
-                        ><b>Variedad:</b> diversos tipos de datos estructurados,
-                        semiestructurados y no estructurados.</span
-                      >
-                    </li>
-                    <hr />
-                    <li>
-                      <i class="fas fa-check v1"></i
-                      ><span
-                        ><b>Veracidad:</b> la confiabilidad y precisión de los
-                        datos.</span
-                      >
-                    </li>
-                    <hr />
-                    <li>
-                      <i class="fas fa-check v1"></i
-                      ><span
-                        ><b>Valor:</b> la capacidad de convertir los datos en
-                        información útil para la toma de decisiones.</span
-                      >
-                    </li>
-                    <hr />
-                  </ul>
-                </div>
-                <div class="col-lg-4 my-lg-0 my-3">
-                  <img
-                    class="img-a img-t"
-                    src="@/assets/curso/temas/4.png"
-                    alt=""
-                  />
-                </div>
-              </div>
-              <div
-                class="bloque-texto-g bloque-texto-g--inverso color-secundario p-3 p-sm-4 p-md-5"
-              >
-                <div
-                  class="bloque-texto-g__img"
-                  :style="{
-                    'background-image': `url(${require('@/assets/curso/temas/6.png')})`,
-                  }"
-                ></div>
-                <div class="bloque-texto-g__texto p-4">
-                  <p class="mb-0">
-                    La siguiente tabla ilustra las diferencias clave entre el
-                    análisis de datos tradicional y el <i>Big Data</i>,
-                    destacando la evolución en la capacidad de procesamiento y
-                    gestión de la información. Mientras que el análisis
-                    tradicional se enfoca en volúmenes menores de datos
-                    estructurados y procesados por lotes, el <i>Big Data</i> se
-                    caracteriza por su capacidad para manejar cantidades masivas
-                    de datos de diferentes tipos (estructurados,
-                    semiestructurados y no estructurados) en tiempo real. Esta
-                    evolución ha impulsado el desarrollo de nuevas tecnologías
-                    como Hadoop, Spark y bases de datos NoSQL, que permiten el
-                    análisis a gran escala y la extracción de información
-                    valiosa para la toma de decisiones.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-lg-10">
-          <div class="titulo-sexto color-acento-botones">
-            <h5>Tabla 1.</h5>
-            <span
-              >Principales estructuras de datos, casos de uso y
-              limitaciones.</span
-            >
-          </div>
-          <div class="tabla-a color-acento-botones mb-2">
-            <table>
-              <caption>
-                Fuente: OIT, 2024.
-              </caption>
-              <thead>
-                <tr>
-                  <th>Aspecto</th>
-                  <th>Análisis tradicional</th>
-                  <th class="fst-italic">Big Data</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Volumen de datos</td>
-                  <td><em>Gigabytes</em></td>
-                  <td><i>Terabytes</i> a <i>Petabytes</i></td>
-                </tr>
-                <tr>
-                  <td>Velocidad de procesamiento</td>
-                  <td>Por lotes (<i>batch</i>)</td>
-                  <td>En tiempo real</td>
-                </tr>
-                <tr>
-                  <td>Tipos de datos</td>
-                  <td>Principalmente estructurados</td>
-                  <td>Estructurados, semiestructurados y no estructurados</td>
-                </tr>
-                <tr>
-                  <td>Escalabilidad</td>
-                  <td>Vertical (mejor <i>hardware</i>)</td>
-                  <td>Horizontal (más nodos)</td>
-                </tr>
-                <tr>
-                  <td>Tecnología principal</td>
-                  <td>Bases de datos relacionales</td>
-                  <td>Hadoop, Spark, NoSQL</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-      <Separador> </Separador>
-      <div id="t_1_2" class="titulo-segundo color-acento-contenido">
-        <h2>1.2 Importancia en el mundo actual</h2>
-      </div>
-      <div class="row justify-content-center mb-4">
-        <div class="col-lg-5 my-lg-0 my-3">
-          <img class="img-a img-t" src="@/assets/curso/temas/7.png" alt="" />
-        </div>
-        <div class="col-lg-7 my-lg-0 my-3">
-          <p>
-            El <i>Big Data</i> ha revolucionado la forma en que las
-            organizaciones toman decisiones y operan en diversos sectores. En el
-            ámbito de los negocios, permite una mejor comprensión del
-            comportamiento del cliente, la optimización de operaciones y el
-            desarrollo de nuevos productos. En el sector salud, facilita la
-            medicina personalizada, la investigación de enfermedades y la mejora
-            de los sistemas de atención médica. A nivel gubernamental, el
-            <i>Big Data</i> ayuda en la planificación urbana, la seguridad
-            pública y la prestación de servicios eficientes. Finalmente, en el
-            campo científico, impulsa descubrimientos en áreas como la genómica,
-            la climatología y la física de partículas.
-          </p>
-        </div>
-      </div>
-      <div class="row bg3 align-items-center">
-        <div class="col-lg-12 col-12 px-lg-5 px-4">
-          <div class="row justify-content-center align-items-center">
-            <div class="col-lg-12">
-              <Separador> </Separador>
-              <div id="t_1_3" class="titulo-segundo color-acento-contenido">
-                <h2>1.3 Procesos asociados al <i>Big Data</i></h2>
-              </div>
-              <p>
-                El manejo del <i>Big Data</i> implica varios procesos clave para
-                poder extraer información valiosa de grandes volúmenes de datos.
-              </p>
-              <div class="row justify-content-center mb-5">
-                <div class="col-lg-10">
-                  <div class="titulo-sexto color-acento-botones">
-                    <h5>Figura 1.</h5>
-                    <span>Ecosistema del <i>Big Data</i></span>
-                  </div>
-                  <div class="bgfig p-5 brad mb-2">
-                    <img
-                      class="img-a img-t"
-                      src="@/assets/curso/temas/8.svg"
-                      alt="La Figura 1 se denomina «Ecosistema del Big Data» y presenta un diagrama donde se observan en secuencia los cinco procesos clave del Big Data: recolección, almacenamiento, procesamiento, análisis y visualización."
-                    />
-                  </div>
-                  <figcaption>Fuente: OIT, 2024.</figcaption>
-                </div>
-              </div>
-              <div class="row justify-content-center">
-                <div class="col-lg-4 my-3">
-                  <img
-                    class="img-a img-t"
-                    src="@/assets/curso/temas/9.png"
-                    alt=""
-                  />
-                </div>
-                <div class="col-lg-8 my-3">
-                  <CarouselCard class="mb-2" columnas="col-lg-12">
-                    <div class="bg4 brad1 p-4 h-100">
-                      <img
-                        class="img-t mb-2"
-                        src="@/assets/curso/temas/10.svg"
-                        alt=""
-                      />
-                      <p class="mb-0">
-                        En primer lugar, la recolección se encarga de capturar
-                        datos de diversas fuentes, como sensores, redes
-                        sociales, transacciones online, etc. Estos datos pueden
-                        ser estructurados (como tablas de bases de datos) o no
-                        estructurados (como texto, imágenes y videos).
-                      </p>
-                    </div>
-                    <div class="bg5 brad1 p-4 h-100">
-                      <img
-                        class="img-t mb-2"
-                        src="@/assets/curso/temas/10.svg"
-                        alt=""
-                      />
-                      <p class="mb-0">
-                        Una vez recopilados, los datos deben ser almacenados de
-                        forma eficiente. Para ello, se utilizan sistemas
-                        distribuidos y bases de datos NoSQL, que permiten
-                        manejar grandes volúmenes de información de manera
-                        escalable y flexible.
-                      </p>
-                    </div>
-                    <div class="bg4 brad1 p-4 h-100">
-                      <img
-                        class="img-t mb-2"
-                        src="@/assets/curso/temas/10.svg"
-                        alt=""
-                      />
-                      <p class="mb-0">
-                        El siguiente paso es el procesamiento de los datos, que
-                        implica la aplicación de técnicas de procesamiento
-                        paralelo y distribuido para transformarlos en un formato
-                        adecuado para el análisis. Esto puede incluir la
-                        limpieza de datos, la transformación de formatos y la
-                        agregación de información.
-                      </p>
-                    </div>
-                    <div class="bg5 brad1 p-4 h-100">
-                      <img
-                        class="img-t mb-2"
-                        src="@/assets/curso/temas/10.svg"
-                        alt=""
-                      />
-                      <p class="mb-0">
-                        Posteriormente, se realiza el análisis de los datos,
-                        empleando técnicas avanzadas como el aprendizaje
-                        automático y la inteligencia artificial para identificar
-                        patrones, tendencias y anomalías. Este análisis permite
-                        obtener <i>insights</i> representativos para la toma de
-                        decisiones.
-                      </p>
-                    </div>
-                    <div class="bg4 brad1 p-4 h-100">
-                      <img
-                        class="img-t mb-2"
-                        src="@/assets/curso/temas/10.svg"
-                        alt=""
-                      />
-                      <p class="mb-0">
-                        Finalmente, los resultados del análisis se presentan
-                        mediante visualizaciones gráficas que facilitan la
-                        comprensión de la información. Estas visualizaciones
-                        pueden incluir gráficos, mapas, dashboards, etc., que
-                        permiten comunicar los hallazgos de forma clara y
-                        concisa.
-                      </p>
-                    </div>
-                    <div class="bg5 brad1 p-4 h-100">
-                      <img
-                        class="img-t mb-2"
-                        src="@/assets/curso/temas/10.svg"
-                        alt=""
-                      />
-                      <p class="mb-0">
-                        Conviene recordar que el <i>Big Data</i> ha transformado
-                        la forma en que se maneja y analiza la información en la
-                        actualidad, generando nuevas oportunidades y desafíos en
-                        múltiples campos de la actividad humana a medida que se
-                        avanza en la era digital. La capacidad de aprovechar el
-                        <i>Big Data</i> de manera efectiva se ha convertido en
-                        una habilidad clave para profesionales y organizaciones,
-                        permitiéndoles extraer <i>insights</i> valiosos y útiles
-                        de grandes cantidades de datos desestructurados y
-                        complejos. Esta habilidad es esencial para tomar
-                        decisiones informadas y estratégicas en diversas
-                        industrias, como la salud, la educación, las finanzas y
-                        el marketing.
-                      </p>
-                    </div>
-                    <div class="bg4 brad1 p-4 h-100">
-                      <img
-                        class="img-t mb-2"
-                        src="@/assets/curso/temas/10.svg"
-                        alt=""
-                      />
-                      <p class="mb-0">
-                        No obstante, lo anterior, también se plantean desafíos,
-                        como la necesidad de contar con expertos/as en análisis
-                        de datos y la preocupación por la privacidad y la
-                        seguridad de los datos. Por lo tanto, es fundamental que
-                        los profesionales y las organizaciones inviertan en el
-                        desarrollo de habilidades y tecnologías para aprovechar
-                        el potencial del <i>Big Data</i> y enfrentar los
-                        desafíos que plantea. Para aquellos/as que inician en el
-                        estudio de los temas relacionados con el
-                        <i>Big Data</i>, se recomienda seguir aprendiendo sobre
-                        matemáticas, estadística y programación, ya que estas
-                        habilidades son fundamentales para el análisis de datos.
-                        Además, es importante estar al tanto de las últimas
-                        tendencias y herramientas en el campo del
-                        <i>Big Data</i>, y tener una mentalidad analítica y
-                        curiosa para poder encontrar nuevas posibilidades y
-                        miradas sobre los datos.
-                      </p>
-                    </div>
-                  </CarouselCard>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</template>
+<template lang="pug">
+  .curso-main-container.pb-3
+    BannerInterno
+    .container.tarjeta.tarjeta--blanca.p-4.p-md-5.mb-5
+      .titulo-principal.color-acento-contenido
+        .titulo-principal__numero
+          span 2
+        h1 Fundamentos de programación
+      .row.bg3.align-items-center.mb-5
+        .col-lg-12.col-12.px-lg-5.px-4
+          .row.justify-content-center.align-items-center          
+            .col-lg-12
+              .row.justify-content-center.align-items-center.bg1.p-4.brad
+                .col-lg-auto
+                  img.img-a.img-t(src='@/assets/curso/temas/11.svg' alt='')
+                .col.pt-lg-0.pt-md-4
+                  p.mb-0 La programación es el lenguaje que permite la comunicación con los datos. Este capítulo establece las bases fundamentales de la programación, presentando conceptos esenciales como algoritmos, variables y estructuras de control, que son punto de partida para comprender cómo se manipulan y procesan los grandes volúmenes de datos en el contexto del Big Data.
+              Separador 
+              #t_2_1.titulo-segundo.color-acento-contenido
+                h2 2.1	Concepto de algoritmo
+              .row.justify-content-center.mb-4
+                .col-lg-8.my-lg-0.my-3
+                  p Un algoritmo es una secuencia de pasos lógicos y bien definidos que resuelven un problema específico. En programación, los algoritmos permiten desarrollar soluciones eficientes y estructuradas. Algunas características clave, que pueden ayudar a comprender lo que es un algoritmo, son las siguientes:
+  
+                  ul.lista-ul.fa-ul
+                    li
+                      i.fas.fa-check.v1
+                      span #[b Precisión:] cada paso debe estar claramente definido.
+                    hr
+  
+                    li
+                      i.fas.fa-check.v1
+                      span #[b Finitud:] debe terminar después de un número finito de pasos.
+                    hr
+  
+                    li
+                      i.fas.fa-check.v1
+                      span #[b Entrada:] puede tener cero o más entradas.
+                    hr
+  
+                    li
+                      i.fas.fa-check.v1
+                      span #[b Salida:] debe producir al menos un resultado.
+                    hr
+  
+                    li
+                      i.fas.fa-check.v1
+                      span #[b Eficacia:] debe ser lo suficientemente básico como para ser llevado a cabo por una persona usando lápiz y papel.
+                    hr
+  
+                .col-lg-4.my-lg-0.my-3
+                  img.img-a.img-t(src='@/assets/curso/temas/12.png' alt='') 
+  
+      Separador 
+      #t_2_2.titulo-segundo.color-acento-contenido
+        h2 2.2	Variables y tipos de datos
+      .row.justify-content-center.mb-4
+        .col-lg-4.my-lg-0.my-3
+          img.img-a.img-t(src='@/assets/curso/temas/13.png' alt='')          
+        .col-lg-8.my-lg-0.my-3
+          .row.justify-content-center.align-items-center.bg4.br-d.p-4.brad.mb-4
+            .col-lg-auto
+              img.img-a.img-t(src='@/assets/curso/temas/14.png' alt='')
+            .col.pt-lg-0.pt-md-4
+              p.mb-0 Las variables son contenedores para almacenar datos en la memoria del computador. Cada variable tiene un tipo de dato asociado que determina qué clase de información puede almacenar. Los siguientes son los tipos de datos más comunes:
+          .bg6.p-4.brad
+            ul.mb-0.lista-ul.fa-ul
+              li
+                i.fas.fa-check.v1
+                span #[b Enteros (int):] números sin parte decimal (ej. 1, -5, 100).
+              li
+                i.fas.fa-check.v1
+                span #[b Flotantes (float):] números con parte decimal (ej. 3.14, -0.01, 2.0).
+              li
+                i.fas.fa-check.v1
+                span #[b Cadenas (string):] secuencias de caracteres (ej. "Hola mundo", "OpenAI").
+              li
+                i.fas.fa-check.v1
+                span #[b Booleanos (bool):] valores de verdadero (True) o falso (False).
+              li
+                i.fas.fa-check.v1
+                span #[b Listas:] colecciones ordenadas de elementos (ej. [1, 2, 3, 4]).
+              li.mb-0
+                i.fas.fa-check.v1
+                span.mb-0 #[b Diccionarios:] colecciones de pares clave-valor (ej. {"nombre": "Juan", "edad": 30}).
+  
+      Separador 
+      #t_2_3.titulo-segundo.color-acento-contenido
+        h2 2.3	Operadores
+        
+      .row.justify-content-center.align-items-center.mb-5
+        .col-lg-auto
+          img.img-a.img-t(src='@/assets/curso/temas/15.png' alt='')
+        .col.pt-lg-0.pt-md-4
+          p.mb-0 Los operadores son símbolos especiales que realizan acciones específicas sobre uno o más operandos. La Tabla 2 muestra los diferentes tipos que se utilizan comúnmente en la mayoría de los lenguajes de programación. Estos incluyen operadores aritméticos para realizar cálculos matemáticos, operadores de comparación para comparar valores, operadores lógicos para combinar condiciones, operadores de asignación para asignar valores a variables y operadores bit a bit para manipular datos a nivel de bits. 
+  
+      .row.justify-content-center
+        .col-lg-10
+          .titulo-sexto.color-acento-botones
+            h5 Tabla 2.
+            span Tipos de operadores en programación
+  
+          .tabla-a.color-acento-botones.text-center.mb-2 
+            table
+              caption Fuente: OIT, 2024.
+              thead
+                tr
+                  th Tipo de Operador
+                  th Ejemplos
+                  th Descripción
+              tbody
+                tr
+                  td Aritméticos
+                  td +, -, *, /, %
+                  td Realizan operaciones matemáticas básicas
+                tr
+                  td Comparación
+                  td ==, !=, >, <, >=, <=
+                  td Comparan valores y devuelven un booleano
+                tr
+                  td Lógicos
+                  td and, or, not
+                  td Combinan condiciones booleanas
+                tr
+                  td Asignación
+                  td =, +=, -=, *=, /=
+                  td Asignan valores a variables
+                tr
+                  td Bit a bit
+                  td &, \
+                  td , ^, ~, <<, >>
+  
+      Separador 
+      #t_2_4.titulo-segundo.color-acento-contenido
+        h2 2.4	Estructuras de control de flujo                
+  
+      p Las estructuras de control de flujo determinan el orden en que se ejecutan las instrucciones en un programa. Son esenciales en programación, ya que permiten dirigir la ejecución del código según condiciones específicas y repetir acciones cuando sea necesario. Las principales son:
+  
+      .row.justify-content-center
+        .col-lg-4.my-3
+          img.img-a.img-t(src='@/assets/curso/temas/19.png', alt='')
+        .col-lg-8.my-3
+          CarouselCard.mb-2(columnas="col-lg-6")
+            .bg7.brad1.p-4.h-100
+              img.img-t.img-a.mb-4(src='@/assets/curso/temas/16.png' alt='')
+              .row.justify-content-center.mb-3
+                .col-auto.bg1.px-3.py-1                        
+                  h5.mb-0.text-center Estructuras secuenciales
+              p.mb-0 Son aquellas en las que las instrucciones se ejecutan una tras otra en el orden en que están escritas. Este es el flujo más básico en un programa, donde no hay saltos ni bifurcaciones. 
+  
+            .bg7.brad1.p-4.h-100
+              img.img-t.img-a.mb-4(src='@/assets/curso/temas/17.png' alt='')
+              .row.justify-content-center.mb-3
+                .col-auto.bg1.px-3.py-1                        
+                  h5.mb-0.text-center Estructuras condicionales
+              p.mb-0 Permiten ejecutar diferentes bloques de código según se cumplan o no ciertas condiciones. Introducen decisiones en el flujo del programa, habilitando rutas alternativas de ejecución.
+  
+            .bg7.brad1.p-4.h-100
+              img.img-t.img-a.mb-4(src='@/assets/curso/temas/18.png' alt='')
+              .row.justify-content-center.mb-3
+                .col-auto.bg1.px-3.py-1                        
+                  h5.mb-0.text-center Estructuras repetitivas
+              p.mb-0 Permiten ejecutar un bloque de código múltiples veces, lo cual es útil para manejar tareas que requieren iteración, como procesar elementos de una lista o realizar operaciones hasta que se cumpla una condición.
+  
+      .row.justify-content-center
+        .col-lg-10
+          .titulo-sexto.color-acento-botones
+            h5 Tabla 3.
+            span Tipos de estructuras de datos y ejemplos
+  
+          .tabla-a.color-acento-botones.mb-2 
+            table
+              caption Fuente: OIT, 2024.
+              thead
+                tr
+                  th Tipo de estructura de control de flujo
+                  th Ejemplo en lenguaje Python
+                  th Observación
+              tbody
+                tr
+                  td 
+                    span #[b Estructuras secuenciales.]<br>
+                    span Ejecución lineal de instrucciones.
+  
+                  td 
+                    span print("Inicio del programa")
+                    br
+                    span nombre = input("Ingresa tu nombre: ")
+                    br
+                    span print(f"Hola, {nombre}!")
+                    br
+                    span print("Fin del programa")
+  
+                  td En este ejemplo, cada instrucción se ejecuta secuencialmente, desde el inicio hasta el final, siguiendo el orden establecido.
+                tr
+                  td 
+                    span #[b Estructuras condicionales.]<br>
+                    span Decisiones basadas en condiciones que alteran el flujo del programa.
+  
+                  td 
+                    span edad = int(input("Ingresa tu edad: "))
+                    br
+                    span if edad >= 18:
+                        br
+                        span.ps-3 print("Eres mayor de edad")
+                    span else:
+                        span.ps-3 print("Eres menor de edad")
+  
+                  td En este caso, el programa solicita al usuario su edad y luego verifica si es mayor o igual a 18. Si la condición es verdadera (edad >= 18), se ejecuta el bloque dentro del if; de lo contrario, se ejecuta el bloque dentro del else.
+                tr
+                  td 
+                    span #[b Estructuras repetitivas.]<br>
+                    span Repetición de bloques de código para realizar tareas iterativas.
+  
+                  td 
+                    span for i in range(5):
+                        br
+                        span.ps-3 print(f"Iteración {i}")
+  
+                  td 
+                    span En este bucle, el bloque de código dentro del for se ejecuta cinco veces. La función range(5) genera una secuencia de números del 0 al 4, y en cada iteración, la variable i toma uno de estos valores. El programa imprimirá:
+                    span Iteración 0
+                    span Iteración 1
+                    span Iteración 2
+                    span Iteración 3
+                    span Iteración 4
+                    span Este tipo de estructura es fundamental para recorrer colecciones de datos y automatizar procesos repetitivos.
+  
+  
+      Separador 
+      #t_2_5.titulo-segundo.color-acento-contenido
+        h2 2.5	Arreglos
+        
+      .row.justify-content-center.align-items-center.mb-5
+        .col-lg-auto
+          img.img-a.img-t(src='@/assets/curso/temas/21.png' alt='')
+        .col.pt-lg-0.pt-md-4
+          p.mb-0 Los arreglos son estructuras de datos que almacenan elementos del mismo tipo en posiciones de memoria contiguas. En muchos lenguajes modernos, como Python, se utilizan listas que son más flexibles que los arreglos tradicionales. El siguiente es un ejemplo en ese lenguaje de programación. 
+        .col-lg-auto
+          img.img-a.img-t(src='@/assets/curso/temas/20.svg' alt='La imagen muestra una breve descripción de cómo se utilizan las listas en lenguajes de programación modernos como Python, y luego proporciona un ejemplo de código Python simple utilizando una lista. El código de ejemplo crea una lista llamada "numeros" con los valores [1, 2, 3, 4, 5], y luego imprime el elemento en el índice 2, que es el número 3.')
+  
+      Separador 
+      #t_2_6.titulo-segundo.color-acento-contenido
+        h2 2.6	Ficheros
+        
+      .row.justify-content-center.align-items-center.mb-5
+        .col-lg-4.my-lg-0.my-3
+          img.img-a.img-t(src='@/assets/curso/temas/22.png' alt='')
+        .col-lg-5.my-lg-0.my-3
+          .bg8.p-3.h-100
+            p Los ficheros permiten almacenar datos de forma permanente en el disco duro. Las operaciones básicas con ficheros incluyen:
+            ul.lista-ul.fa-ul
+              li
+                i.fas.fa-check.v1
+                span Abrir un fichero
+              li
+                i.fas.fa-check.v1
+                span Leer datos de un fichero
+              li
+                i.fas.fa-check.v1
+                span Escribir datos en un fichero
+              li
+                i.fas.fa-check.v1
+                span Cerrar un fichero   
+  
+            p Este es un ejemplo de escritura en un fichero en Python:
+            img.img-t(src='@/assets/curso/temas/24.svg' alt='La imagen presenta un ejemplo de escritura en Python. Este es: "Hola, mundo!" en un archivo llamado "ejemplo.txt"')        
+  
+        .col-lg-3.my-lg-0.my-3
+          img.img-a.img-t(src='@/assets/curso/temas/23.png' alt='')     
+  
+      Separador 
+      #t_2_7.titulo-segundo.color-acento-contenido
+        h2 2.7	Funciones
+        
+      .row.justify-content-center.align-items-center.mb-5
+        .col-lg-8.my-lg-0.my-3
+          p Las funciones son bloques de código reutilizables que realizan una tarea específica. Ayudan a organizar el código, evitar la repetición y mejorar la legibilidad. Ejemplo de función en Python: 
+          .row.justify-content-start.align-items-center.mb-4
+            .col-lg-auto.my-lg-0.my-3
+              img.img-a.img-t(src='@/assets/curso/temas/25.png' alt='')
+            .col-lg-5.my-lg-0.my-3
+              img.img-a.img-t(src='@/assets/curso/temas/26.svg' alt='La imagen presenta una función en Python en la cual se saluda a una persona cuyo nombre se pasa como argumento')
+              
+          .bg9.brad.p-3
+            p.mb-0 Estos fundamentos de programación son esenciales para comprender cómo se desarrollan las soluciones de #[i software] en el contexto del #[i Big Data]. En los próximos capítulos, se percibirá cómo estos conceptos se aplican en lenguajes específicos utilizados en la analítica de datos.      
+  
+        .col-lg-4.my-lg-0.my-3
+          img.img-a.img-t(src='@/assets/curso/temas/27.png' alt='')              
+  </template>
 
 <script>
 export default {
