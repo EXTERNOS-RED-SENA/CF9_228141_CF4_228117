@@ -10,18 +10,19 @@
           <div class="bg2 text-white p-3 brad j1 h-100">
             <p>
               El siguiente diagrama proporciona una visión general sintetizada
-              de los principales temas abordados en este componente sobre Big
-              Data. Este mapa está diseñado para ayudar al lector a visualizar
-              la interconexión entre los diversos componentes que conforman el
-              ecosistema del Big Data.
+              de los principales temas abordados en este componente sobre
+              <em> Big Data</em>. Este mapa está diseñado para ayudar al lector
+              a visualizar la interconexión entre los diversos componentes que
+              conforman el ecosistema del <em> Big Data</em>.
             </p>
             <p>
               En el origen del diagrama se encuentra el concepto principal de
-              Big Data, del cual se ramifican aprendizajes fundamentales:
-              fundamentos de Programación, analítica de datos, bases de datos,
-              tipos y fuentes de datos, y herramientas informáticas. Cada una de
-              estas áreas se desglosa a su vez en subtemas clave, reflejando la
-              estructura y el contenido del componente.
+              <em> Big Data</em>, del cual se ramifican aprendizajes
+              fundamentales: fundamentos de Programación, analítica de datos,
+              bases de datos, tipos y fuentes de datos, y herramientas
+              informáticas. Cada una de estas áreas se desglosa a su vez en
+              subtemas clave, reflejando la estructura y el contenido del
+              componente.
             </p>
           </div>
         </div>
@@ -31,11 +32,11 @@
         presentados en el texto, permitiendo al lector comprender rápidamente la
         amplitud y profundidad de los temas cubiertos, así como sus
         interrelaciones. Al revisar este mapa, el aprendiz podrá apreciar cómo
-        los diferentes aspectos del Big Data se integran para formar un campo de
-        estudio cohesivo y multifacético. Se invita a explorar este diagrama
-        como un complemento al contenido detallado del componente, utilizándolo
-        como una referencia rápida y un recordatorio visual de conceptos clave
-        en el mundo del Big Data.
+        los diferentes aspectos del <em> Big Data</em> se integran para formar
+        un campo de estudio cohesivo y multifacético. Se invita a explorar este
+        diagrama como un complemento al contenido detallado del componente,
+        utilizándolo como una referencia rápida y un recordatorio visual de
+        conceptos clave en el mundo del <em> Big Data</em>.
       </p>
       <div class="row justify-content-center">
         <div class="col-lg-10 bgs p-4 brad">
