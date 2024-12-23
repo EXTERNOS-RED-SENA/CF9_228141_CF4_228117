@@ -5,7 +5,7 @@
       .titulo-principal.color-acento-contenido
         .titulo-principal__numero
           span 3
-        h1 Lenguajes de Programación para analítica de datos
+        h1 Lenguajes de programación para analítica de datos
   
       .row.justify-content-center.align-items-center.bg4.br-d.p-4.brad.mb-4
         .col-lg-auto
@@ -43,7 +43,7 @@
             .col-lg-auto
               img.img-a.img-t(src='@/assets/curso/temas/31.png' alt='')
             .col.pt-lg-0.pt-md-4
-              p.mb-0 La evolución de ambos lenguajes ha sido impulsada por las crecientes demandas del #[i Big Data]  y la analítica avanzada. R ha mantenido su fortaleza en el análisis estadístico y la visualización de datos, mientras que Python ha ampliado su alcance para incluir aprendizaje automático, procesamiento de lenguaje natural y análisis de redes sociales, entre otros campos
+              p.mb-0 La evolución de ambos lenguajes ha sido impulsada por las crecientes demandas del #[i Big Data]  y la analítica avanzada. R ha mantenido su fortaleza en el análisis estadístico y la visualización de datos, mientras que Python ha ampliado su alcance para incluir aprendizaje automático, procesamiento de lenguaje natural y análisis de redes sociales, entre otros campos.
             
       Separador 
       #t_3_3.titulo-segundo.color-acento-contenido
@@ -108,8 +108,18 @@
       .row.justify-content-center.mb-4
         .col-lg-5.my-lg-0.my-3
           .bg4.brad.p-3.h-100
-            p #[b R:] R utiliza una sintaxis que puede parecer única al principio, pero que está optimizada para operaciones vectoriales y matriciales comunes en estadísticas.       
-            img.img-a.img-t.mb-4(src='@/assets/curso/temas/37.svg' alt='') 
+            p #[b R:] R utiliza una sintaxis que puede parecer única al principio, pero que está optimizada para operaciones vectoriales y matriciales comunes en estadísticas.     
+            .p-4.tarjeta.bg-transparent.color-secundario--borde.mb-3
+              pre
+                code  
+                  |# Ejemplo de un análisis simple en R
+                  |data <- read.csv("datos.csv")
+                  |summary(data)
+                  |plot(data$x, data$y, main="Gráfico de dispersión")
+                  |model <- lm(y ~ x, data=data)
+                  |summary(model)
+
+            //- img.img-a.img-t.mb-4(src='@/assets/curso/temas/37.svg' alt='') 
   
             .row.justify-content-start.align-items-center.mb-4
               .col-lg-auto.my-lg-0.my-3
@@ -121,7 +131,24 @@
             p #[b Python:] Python utiliza una sintaxis más general que enfatiza la legibilidad y la simplicidad.
             .row.justify-content-start.align-items-center.mb-4
               .col.my-lg-0.my-3
-                img.img-a.img-t(src='@/assets/curso/temas/39.svg' alt='La imagen muestra un ejemplo en el cual  R puede leer datos de un archivo CSV, calcular un resumen estadístico, crear un gráfico de dispersión y ajustar un modelo lineal, todo en unas pocas líneas de código. ')
+                .p-4.tarjeta.bg-transparent.color-secundario--borde.mb-3
+                  pre
+                    code
+                      |# Ejemplo equivalente en Python
+                      |import pandas as pd
+                      |import matplotlib.pyplot as plt
+                      |from scipy import stats
+                      br
+                      br
+                      | data = pd.read_csv("datos.csv")
+                      |print(data.describe())
+                      |plt.scatter(data['x'], data['y'])
+                      |plt.title("Gráfico de dispersión")
+                      |plt.show()
+                      |model = stats.linregress(data['x'], data['y'])
+                      |print(model)
+
+
               .col.my-lg-0.my-3
                 img.img-a.img-t(src='@/assets/curso/temas/40.png' alt='')      
             p Este código de Python realiza las mismas operaciones que el ejemplo de R, pero utiliza bibliotecas específicas (pandas para manejo de datos, matplotlib para gráficos, scipy para estadísticas) que deben importarse explícitamente.
@@ -198,7 +225,7 @@
                 tr
                   td Visualización
                   td Excelente (ggplot2)
-                  td Muy buena (matplotlib, seaborn)
+                  td #[em Machine learning] (matplotlib, seaborn)
                 tr
                   td.fast-italic Muy buena (matplotlib, seaborn)
                   td Bueno
@@ -290,12 +317,58 @@
         .col-lg-6.my-lg-0.my-3
           img.img-a.img-t.mb-4(src='@/assets/curso/temas/52.png' alt='La imagen es un código R  para generar un gráfico de dispersión y un resumen estadístico.')  
           .bg13.brad.p-3
-            img.img-a.img-t(src='@/assets/curso/temas/54.svg' alt='La imagen es un código R  para generar un gráfico de dispersión y un resumen estadístico.')  
+            .p-4.tarjeta.bg-transparent.color-secundario--borde.mb-3
+              pre
+                code
+                  |---
+                  |title: "Análisis de Ventas"
+                  |author: "Juan Pérez"
+                  |date: "2023-05-15"
+                  |output: html_document
+                  |---
+                  br
+                  br
+                  |# Introducción
+                  |Este informe analiza las ventas del último trimestre.
+                  br
+                  br
+                  |```{r}
+                  |library(ggplot2)
+                  |ventas <- read.csv("ventas.csv")
+                  |ggplot(ventas, aes(x=mes, y=ingresos)) + geom_bar(stat="identity")
+
   
         .col-lg-6.my-lg-0.my-3
           .bg4.brad.p-3
             p A su vez, se presenta el ejemplo en Python.
-            img.img-a.img-t(src='@/assets/curso/temas/53.svg' alt='')   
+            .p-4.tarjeta.bg-transparent.color-secundario--borde.mb-3
+              pre
+                code En Python, Jupyter Notebooks ofrece una funcionalidad similar. Los notebooks combinan celdas de código ejecutable con celdas de texto formateado en Markdown, permitiendo crear documentos interactivos que mezclan explicaciones, código y resultados.
+
+                  |Ejemplo de un Jupyter Notebook:
+                  br
+                  br
+                  |```python
+                  |# %% [markdown]
+                  |# # Análisis de Ventas
+                  |# 
+                  |# Este notebook analiza las ventas del último trimestre.
+                  br
+                  br
+                  |# %%
+                  |import pandas as pd
+                  |import matplotlib.pyplot as plt
+                  |
+                  |ventas = pd.read_csv("ventas.csv")
+                  |plt.figure(figsize=(10,6))
+                  |plt.bar(ventas['mes'], ventas['ingresos'])
+                  |plt.title("Ventas por Mes")
+                  |plt.show()
+                  br
+                  br
+                  |# %% [markdown]
+                  |# Como podemos ver en el gráfico anterior, las ventas han aumentado constantemente a lo largo del trimestre.
+
   
       p Ambas herramientas promueven la reproducibilidad de la investigación y facilitan la comunicación de resultados complejos de manera clara y estructurada.
   

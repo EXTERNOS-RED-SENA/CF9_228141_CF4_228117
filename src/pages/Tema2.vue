@@ -14,7 +14,7 @@
                 .col-lg-auto
                   img.img-a.img-t(src='@/assets/curso/temas/11.svg' alt='')
                 .col.pt-lg-0.pt-md-4
-                  p.mb-0 La programación es el lenguaje que permite la comunicación con los datos. Este capítulo establece las bases fundamentales de la programación, presentando conceptos esenciales como algoritmos, variables y estructuras de control, que son punto de partida para comprender cómo se manipulan y procesan los grandes volúmenes de datos en el contexto del Big Data.
+                  p.mb-0 La programación es el lenguaje que permite la comunicación con los datos. Este capítulo establece las bases fundamentales de la programación, presentando conceptos esenciales como algoritmos, variables y estructuras de control, que son punto de partida para comprender cómo se manipulan y procesan los grandes volúmenes de datos en el contexto del #[em Big Data.]
               Separador 
               #t_2_1.titulo-segundo.color-acento-contenido
                 h2 2.1	Concepto de algoritmo
@@ -92,7 +92,7 @@
         .col-lg-auto
           img.img-a.img-t(src='@/assets/curso/temas/15.png' alt='')
         .col.pt-lg-0.pt-md-4
-          p.mb-0 Los operadores son símbolos especiales que realizan acciones específicas sobre uno o más operandos. La Tabla 2 muestra los diferentes tipos que se utilizan comúnmente en la mayoría de los lenguajes de programación. Estos incluyen operadores aritméticos para realizar cálculos matemáticos, operadores de comparación para comparar valores, operadores lógicos para combinar condiciones, operadores de asignación para asignar valores a variables y operadores bit a bit para manipular datos a nivel de bits. 
+          p.mb-0 Los operadores son símbolos especiales que realizan acciones específicas sobre uno o más operandos. La Tabla 2 muestra los diferentes tipos que se utilizan comúnmente en la mayoría de los lenguajes de programación. Estos incluyen operadores aritméticos para realizar cálculos matemáticos, operadores de comparación para comparar valores, operadores lógicos para combinar condiciones, operadores de asignación para asignar valores a variables y operadores #[em bit] a #[em bit] para manipular datos a nivel de #[em bits]. 
   
       .row.justify-content-center
         .col-lg-10
@@ -126,7 +126,7 @@
                   td =, +=, -=, *=, /=
                   td Asignan valores a variables
                 tr
-                  td Bit a bit
+                  td #[em Bit] a #[em bit]
                   td &, \
                   td , ^, ~, <<, >>
   
@@ -219,12 +219,18 @@
   
                   td 
                     span En este bucle, el bloque de código dentro del for se ejecuta cinco veces. La función range(5) genera una secuencia de números del 0 al 4, y en cada iteración, la variable i toma uno de estos valores. El programa imprimirá:
-                    span Iteración 0
-                    span Iteración 1
-                    span Iteración 2
-                    span Iteración 3
-                    span Iteración 4
-                    span Este tipo de estructura es fundamental para recorrer colecciones de datos y automatizar procesos repetitivos.
+                    br
+                    | Iteración 0
+                    br
+                    | Iteración 1
+                    br
+                    | Iteración 2
+                    br
+                    | Iteración 3
+                    br
+                    | Iteración 4
+                    br
+                    | Este tipo de estructura es fundamental para recorrer colecciones de datos y automatizar procesos repetitivos.
   
   
       Separador 
@@ -237,7 +243,14 @@
         .col.pt-lg-0.pt-md-4
           p.mb-0 Los arreglos son estructuras de datos que almacenan elementos del mismo tipo en posiciones de memoria contiguas. En muchos lenguajes modernos, como Python, se utilizan listas que son más flexibles que los arreglos tradicionales. El siguiente es un ejemplo en ese lenguaje de programación. 
         .col-lg-auto
-          img.img-a.img-t(src='@/assets/curso/temas/20.svg' alt='La imagen muestra una breve descripción de cómo se utilizan las listas en lenguajes de programación modernos como Python, y luego proporciona un ejemplo de código Python simple utilizando una lista. El código de ejemplo crea una lista llamada "numeros" con los valores [1, 2, 3, 4, 5], y luego imprime el elemento en el índice 2, que es el número 3.')
+          .p-4.tarjeta.color-secundario--borde
+            pre
+              code 
+                |numeros = [1, 2, 3, 4, 5]
+                |print(numeros[2])  # Imprime: 3
+                |
+                
+
   
       Separador 
       #t_2_6.titulo-segundo.color-acento-contenido
@@ -252,19 +265,23 @@
             ul.lista-ul.fa-ul
               li
                 i.fas.fa-check.v1
-                span Abrir un fichero
+                span Abrir un fichero.
               li
                 i.fas.fa-check.v1
-                span Leer datos de un fichero
+                span Leer datos de un fichero.
               li
                 i.fas.fa-check.v1
-                span Escribir datos en un fichero
+                span Escribir datos en un fichero.
               li
                 i.fas.fa-check.v1
-                span Cerrar un fichero   
+                span Cerrar un fichero.
   
             p Este es un ejemplo de escritura en un fichero en Python:
-            img.img-t(src='@/assets/curso/temas/24.svg' alt='La imagen presenta un ejemplo de escritura en Python. Este es: "Hola, mundo!" en un archivo llamado "ejemplo.txt"')        
+            .p-4.tarjeta.color-secundario--borde
+              pre
+                code
+                  |with open('ejemplo.txt', 'w') as f:
+                  |    f.write('Hola, mundo!')      
   
         .col-lg-3.my-lg-0.my-3
           img.img-a.img-t(src='@/assets/curso/temas/23.png' alt='')     
@@ -280,7 +297,13 @@
             .col-lg-auto.my-lg-0.my-3
               img.img-a.img-t(src='@/assets/curso/temas/25.png' alt='')
             .col-lg-5.my-lg-0.my-3
-              img.img-a.img-t(src='@/assets/curso/temas/26.svg' alt='La imagen presenta una función en Python en la cual se saluda a una persona cuyo nombre se pasa como argumento')
+              .p-4.tarjeta.color-secundario--borde
+                pre
+                  code 
+                    |def saludar(nombre):
+                    |    return f"Hola, {nombre}!"
+                    |print(saludar("Ana"))  # Imprime: Hola, Ana!
+
               
           .bg9.brad.p-3
             p.mb-0 Estos fundamentos de programación son esenciales para comprender cómo se desarrollan las soluciones de #[i software] en el contexto del #[i Big Data]. En los próximos capítulos, se percibirá cómo estos conceptos se aplican en lenguajes específicos utilizados en la analítica de datos.      

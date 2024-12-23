@@ -56,8 +56,17 @@
               .col-lg-auto
                 img.img-a.img-t(src='@/assets/curso/temas/73.png' alt='')
               .col.pt-lg-0.pt-md-4
-                img.img-a.img-t(src='@/assets/curso/temas/74.svg' alt='La imagen muestra los pasos de preprocesamiento de datos en Python usando la librería pandas.')
-  
+                .p-4.tarjeta.bg-transparent.color-secundario--borde.mb-3
+                  pre
+                    code
+                      |import pandas as pd
+                      |# Cargar datos
+                      |df = pd.read_csv('datos.csv')
+                      |# Convertir columna a tipo datetime
+                      |df['fecha'] = pd.to_datetime(df['fecha'])
+                      |# Convertir variable categórica a dummy
+                      |df = pd.get_dummies(df, columns=['categoria'])
+
         .col-lg-4.my-lg-0.my-3.j1
           img.img-a.img-t(src='@/assets/curso/temas/75.png' alt='')      
   
@@ -74,16 +83,16 @@
             ul.mb-0.lista-ul.fa-ul
               li
                 i.fas.fa-check.v1
-                span Manejo de valores faltantes
+                span Manejo de valores faltantes.
               li
                 i.fas.fa-check.v1
-                span Normalización o estandarización de variables numéricas
+                span Normalización o estandarización de variables numéricas.
               li
                 i.fas.fa-check.v1
-                span Creación de nuevas variables basadas en las existentes
+                span Creación de nuevas variables basadas en las existentes.
               li.mb-0
                 i.fas.fa-check.v1
-                span.mb-0 Agregación de datos
+                span.mb-0 Agregación de datos.
   
   
         .col-lg-5.my-lg-0.my-3.j1
@@ -99,7 +108,15 @@
               .col
                 img.img-a.img-t(src='@/assets/curso/temas/78.svg' alt='')
               .col-lg-auto.d-none.d-lg-block
-                img.img-a.img-t(src='@/assets/curso/temas/79.svg' alt='El código en la imagen demuestra los pasos de preprocesamiento de datos en R.')
+                .p-4.tarjeta.bg-transparent.color-secundario--borde.mb-3
+                  pre
+                    code
+                      |library(dplyr)
+                      |datos <- datos %>%
+                      | mutate(nueva_var = var1 / var2) %>%  # Crear nueva variable
+                      | filter(!is.na(var3)) %>%  # Eliminar filas con NA en var3
+                      | arrange(desc(nueva_var))  # Ordenar por nueva_var en orden descendente
+
   
       Separador 
       #t_6_4.titulo-segundo.color-acento-contenido
@@ -156,7 +173,7 @@
       #t_6_5.titulo-segundo.color-acento-contenido
         h2 6.5	Uso de expresiones regulares
   
-      p Las expresiones regulares, o regex, son una herramienta poderosa para el procesamiento de texto y la búsqueda de patrones. Son especialmente útiles cuando se trabaja con datos no estructurados o semiestructurados. En el contexto de la analítica de datos, las expresiones regulares se utilizan comúnmente para:
+      p Las expresiones regulares, o #[em regex], son una herramienta poderosa para el procesamiento de texto y la búsqueda de patrones. Son especialmente útiles cuando se trabaja con datos no estructurados o semiestructurados. En el contexto de la analítica de datos, las expresiones regulares se utilizan comúnmente para:
   
       .row.justify-content-center     
         .col-lg-8.my-lg-0.my-3
@@ -172,8 +189,19 @@
                 i.fas.fa-check.v1
                 span Validación de formatos (por ejemplo, direcciones de correo electrónico, números de teléfono).
               p.mb-0 Tanto R como Python tienen soporte integrado para expresiones regulares. Por ejemplo, en Python:
-          .bg2.p-3.brad.j1
-            img.img-a.img-t(src='@/assets/curso/temas/81.svg' alt='') 
+          .p-3(style="background-color: #10314b ")
+            .p-4.tarjeta.bg-white.color-secundario--borde.mb-3
+              pre
+                code 
+                  |import re
+                  |
+                  |texto = "El correo de Juan es juan@example.com y su teléfono es 123-456-7890"
+                  |email = re.search(r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b', texto)
+                  |telefono = re.search(r'\d{3}-\d{3}-\d{4}', texto)
+                  |
+                  |print(email.group())  # Imprime: juan@example.com
+                  |print(telefono.group())  # Imprime: 123-456-7890
+
         .col-lg-4.my-lg-0.my-3.j1
           img.img-a.img-t(src='@/assets/curso/temas/82.png' alt='')              
   
@@ -185,13 +213,32 @@
   
       .row.justify-content-center     
         .col-lg-6.my-lg-0.my-3
-          .bg13.p-3.brad.j1.h-100
-            img.img-a.img-t(src='@/assets/curso/temas/83.svg' alt='')
+          .p-4.h-100(style="background-color: #f3f0ea")
+            .p-4.tarjeta.bg-transparent.color-secundario--borde.mb-3
+              pre
+                code from sklearn.model_selection import train_test_split
+                  |from sklearn.ensemble import RandomForestClassifier
+                  |from sklearn.metrics import accuracy_score
+                  |
+                  |# Dividir los datos en conjuntos de entrenamiento y prueba
+                  |X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+
         .col-lg-6.my-lg-0.my-3
           .bgi.p-3.brad.j1.h-100 
             .row.justify-content-center.align-items-center
               .col
-                img.img-a.img-t(src='@/assets/curso/temas/84.svg' alt='La imagen muestra los pasos de preprocesamiento. Cargar módulos de sklearn para selección de modelo, división del conjunto de datos de entrenamiento y prueba, y métricas de evaluación. Dividir los datos en conjuntos de entrenamiento y prueba. Crear y entrenar un modelo RandomForestClassifier. Hacer predicciones con el modelo entrenado y evaluar la precisión.')
+                .p-4.tarjeta.bg-transparent.color-secundario--borde.mb-3
+                  pre
+                    code
+                      |# Crear y entrenar el modelo
+                      |modelo = RandomForestClassifier()
+                      |modelo.fit(X_train, y_train)
+                      |
+                      |# Hacer predicciones y evaluar el modelo
+                      |predicciones = modelo.predict(X_test)
+                      |precision = accuracy_score(y_test, predicciones)
+                      |print(f"Precisión del modelo: {precision}")
+
               .col-lg-auto.d-none.d-lg-block
                 img.img-a.img-t(src='@/assets/curso/temas/85.png' alt='La imagen muestra los pasos de preprocesamiento. Cargar módulos de sklearn para selección de modelo, división del conjunto de datos de entrenamiento y prueba, y métricas de evaluación. Dividir los datos en conjuntos de entrenamiento y prueba. Crear y entrenar un modelo RandomForestClassifier. Hacer predicciones con el modelo entrenado y evaluar la precisión.')  
   
@@ -206,8 +253,18 @@
           
           .row.justify-content-center.align-items-center
             .col-lg-8
-              .bg13.brad.p-3.j1.h-100
-                img.img-a.img-t(src='@/assets/curso/temas/88.svg' alt='')
+              .p-4(style="background-color: #f3f0ea")
+                .p-4.tarjeta.bg-transparent.color-secundario--borde.mb-3
+                  pre
+                    code
+                      from fuzzywuzzy import process
+                        br
+                        |nombres = ["John Smith", "Jane Doe", "John Smth", "Jane Do"]
+                        |
+                        |# Encontrar coincidencias cercanas para "John Smith"
+                        |coincidencias = process.extract("John Smith", nombres, limit=2)
+                        |print(coincidencias)  # [('John Smith', 100), ('John Smth', 95)]
+
             .col-lg-4.d-none.d-lg-block
               img.img-a.img-t(src='@/assets/curso/temas/87.png' alt='')                       
   

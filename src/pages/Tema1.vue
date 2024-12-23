@@ -4,8 +4,8 @@
     .container.tarjeta.tarjeta--blanca.p-4.p-md-5.mb-5
       .titulo-principal.color-acento-contenido
         .titulo-principal__numero
-          span 1
-        h1 Introducción al #[i Big Data]
+        span 1
+        h1 Introducción al #[i BIG DATA]
         
       p En este capítulo inicial, se introduce el concepto fundamental del #[i Big Data] y su papel transformador en la sociedad contemporánea. Se exploran las características distintivas que definen al #[i Big Data], conocidas como las «5 V», y se examina cómo este fenómeno está revolucionando la forma en que organizaciones y personas toman decisiones en diversos sectores.   
   
@@ -133,7 +133,7 @@
                   CarouselCard.mb-2(columnas="col-lg-12")
                     .bg4.brad1.p-4.h-100
                       img.img-t.mb-2(src='@/assets/curso/temas/10.svg' alt='')
-                      p.mb-0 En primer lugar, la recolección se encarga de capturar datos de diversas fuentes, como sensores, redes sociales, transacciones online, etc. Estos datos pueden ser estructurados (como tablas de bases de datos) o no estructurados (como texto, imágenes y videos).
+                      p.mb-0 En primer lugar, la recolección se encarga de capturar datos de diversas fuentes, como sensores, redes sociales, transacciones <em>online</em>, etc. Estos datos pueden ser estructurados (como tablas de bases de datos) o no estructurados (como texto, imágenes y videos).
                     .bg5.brad1.p-4.h-100
                       img.img-t.mb-2(src='@/assets/curso/temas/10.svg' alt='')
                       p.mb-0 Una vez recopilados, los datos deben ser almacenados de forma eficiente. Para ello, se utilizan sistemas distribuidos y bases de datos NoSQL, que permiten manejar grandes volúmenes de información de manera escalable y flexible.
@@ -148,7 +148,7 @@
                       p.mb-0 Finalmente, los resultados del análisis se presentan mediante visualizaciones gráficas que facilitan la comprensión de la información. Estas visualizaciones pueden incluir gráficos, mapas, dashboards, etc., que permiten comunicar los hallazgos de forma clara y concisa.
                     .bg5.brad1.p-4.h-100
                       img.img-t.mb-2(src='@/assets/curso/temas/10.svg' alt='')
-                      p.mb-0 Conviene recordar que el #[i Big Data] ha transformado la forma en que se maneja y analiza la información en la actualidad, generando nuevas oportunidades y desafíos en múltiples campos de la actividad humana a medida que se avanza en la era digital. La capacidad de aprovechar el #[i Big Data] de manera efectiva se ha convertido en una habilidad clave para profesionales y organizaciones, permitiéndoles extraer #[i insights] valiosos y útiles de grandes cantidades de datos desestructurados y complejos. Esta habilidad es esencial para tomar decisiones informadas y estratégicas en diversas industrias, como la salud, la educación, las finanzas y el marketing. 
+                      p.mb-0 Conviene recordar que el #[i Big Data] ha transformado la forma en que se maneja y analiza la información en la actualidad, generando nuevas oportunidades y desafíos en múltiples campos de la actividad humana a medida que se avanza en la era digital. La capacidad de aprovechar el #[i Big Data] de manera efectiva se ha convertido en una habilidad clave para profesionales y organizaciones, permitiéndoles extraer #[i insights] valiosos y útiles de grandes cantidades de datos desestructurados y complejos. Esta habilidad es esencial para tomar decisiones informadas y estratégicas en diversas industrias, como la salud, la educación, las finanzas y el #[em marketing]. 
                     .bg4.brad1.p-4.h-100
                       img.img-t.mb-2(src='@/assets/curso/temas/10.svg' alt='')
                       p.mb-0 No obstante, lo anterior, también se plantean desafíos, como la necesidad de contar con expertos/as en análisis de datos y la preocupación por la privacidad y la seguridad de los datos. Por lo tanto, es fundamental que los profesionales y las organizaciones inviertan en el desarrollo de habilidades y tecnologías para aprovechar el potencial del #[i Big Data] y enfrentar los desafíos que plantea. Para aquellos/as que inician en el estudio de los temas relacionados con el #[i Big Data], se recomienda seguir aprendiendo sobre matemáticas, estadística y programación, ya que estas habilidades son fundamentales para el análisis de datos. Además, es importante estar al tanto de las últimas tendencias y herramientas en el campo del #[i Big Data], y tener una mentalidad analítica y curiosa para poder encontrar nuevas posibilidades y miradas sobre los datos. 

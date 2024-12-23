@@ -15,7 +15,7 @@ export default {
       {
         nombreRuta: 'tema1',
         numero: '1',
-        titulo: 'Introducción al <i>Big Data</i>',
+        titulo: 'Introducción al <i>BIG DATA</i>',
         desarrolloContenidos: true,
         subMenu: [
           {
@@ -82,7 +82,7 @@ export default {
       {
         nombreRuta: 'tema3',
         numero: '3',
-        titulo: 'Lenguajes de Programación para analítica de datos',
+        titulo: 'Lenguajes de programación para analítica de datos',
         desarrolloContenidos: true,
         subMenu: [
           {

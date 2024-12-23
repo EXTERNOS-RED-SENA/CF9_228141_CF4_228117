@@ -59,7 +59,7 @@ export default {
     complementarioData() {
       return [
         {
-          tema: 'Introducción al <i>BIG DATA</i>',
+          tema: '1. Introducción al <i>BIG DATA</i>',
           referencia:
             'Ecosistema de Recursos Educativos Digitales SENA. (2023c, noviembre 21). La historia de la <i>Big Data</i>.',
           tipo: 'Video',

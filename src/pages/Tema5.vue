@@ -89,7 +89,7 @@
           .row.justify-content-center.mb-5
             .col-lg-8.my-lg-0.my-3
               .bgi.p-3.brad.j1.h-100
-                p.mb-0 SQL (#[i Structured Query Language]) es el lenguaje estándar para interactuar con bases de datos relacionales. Aunque las bases de datos NoSQL no utilizan SQL directamente, muchas han adoptado lenguajes de consulta similares. Comprender SQL es fundamental para trabajar con datos estructurados e incluso no estructurados. Las sentencias SQL se dividen en varios tipos como se procura sintetizar a continuación. 
+                p.mb-0 SQL (#[i Structured Query Language]) es el lenguaje estándar para interactuar con bases de datos relacionales. Aunque las bases de datos NoSQL no utilizan SQL directamente, muchas han adoptado lenguajes de consulta similares. Comprender SQL es fundamental para trabajar con datos estructurados e incluso no estructurados. Las sentencias SQL se dividen en varios tipos, como se procura sintetizar a continuación. 
   
             .col-lg-4.my-lg-0.my-3.j1
               img.img-a.img-t(src='@/assets/curso/temas/63.png' alt='')  
@@ -108,7 +108,7 @@
                 tr
                   th Tipo de sentencias
                   th Ejemplo de sentencia
-                  th de 
+                  th Ejemplo de código fuente
   
               tbody
                 tr
@@ -190,7 +190,7 @@
             CarouselRED(tipo="b")
               .row.justify-content-center
                 .col-lg-6.my-2
-                  p La #[b primera fase] del proceso es la extracción, que consiste en obtener datos desde diferentes fuentes, tales como bases de datos relacionales, sistemas CRM o ERP, archivos planos en formatos como CSV o JSON, API web, redes sociales, o incluso logs de servidores. Este paso presenta ciertos desafíos, como el manejo de formatos variados, la interacción con sistemas heredados, y la gestión de grandes volúmenes de datos, todo mientras se asegura la integridad de la información extraída.
+                  p La #[b primera fase] del proceso es la extracción, que consiste en obtener datos desde diferentes fuentes, tales como bases de datos relacionales, sistemas CRM o ERP, archivos planos en formatos como CSV o JSON, API web, redes sociales, o incluso #[em logs] de servidores. Este paso presenta ciertos desafíos, como el manejo de formatos variados, la interacción con sistemas heredados, y la gestión de grandes volúmenes de datos, todo mientras se asegura la integridad de la información extraída.
                 .col-lg-5.my-2 
                   img.img-a.img-t(src='@/assets/curso/temas/65.png', alt='')                       
               .row.justify-content-center

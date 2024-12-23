@@ -16,18 +16,20 @@
               Cada día, se generan y se consumen cantidades asombrosas de
               información, desde las interacciones en redes sociales hasta las
               transacciones financieras y los registros médicos. Este diluvio de
-              datos ha dado lugar al fenómeno conocido como Big Data, un campo
-              que promete revolucionar la forma en que se entienden y se toman
-              decisiones en prácticamente todos los aspectos de la vida.
+              datos ha dado lugar al fenómeno conocido como <em> Big Data</em>,
+              un campo que promete revolucionar la forma en que se entienden y
+              se toman decisiones en prácticamente todos los aspectos de la
+              vida.
             </p>
             <p>
-              Pero ¿qué es exactamente el Big Data y por qué es tan importante?
-              Este componente formativo le acercará al fascinante mundo del Big
-              Data, explorando cómo las organizaciones y los individuos pueden
-              aprovechar esta avalancha de información para obtener
-              <i>insights</i> valiosos, mejorar la eficiencia y resolver
+              Pero ¿qué es exactamente el <em> Big Data</em> y por qué es tan
+              importante? Este componente formativo le acercará al fascinante
+              mundo del Big Data, explorando cómo las organizaciones y los
+              individuos pueden aprovechar esta avalancha de información para
+              obtener <i>insights</i> valiosos, mejorar la eficiencia y resolver
               problemas complejos. Desde predicciones meteorológicas más
-              precisas hasta tratamientos médicos personalizados, el Big Data
+              precisas hasta tratamientos médicos personalizados, el
+              <em> Big Data</em>
               está transformando industrias enteras y abriendo nuevas
               posibilidades.
             </p>
@@ -45,9 +47,10 @@
                 <p class="mb-0">
                   A lo largo de estas páginas, será guiado a través de los
                   conceptos fundamentales, las técnicas y las herramientas
-                  esenciales del Big Data. Utilizando ejemplos y códigos, se
-                  descubrirá cómo los datos masivos están dando forma al futuro
-                  y cómo se puede ser parte de esta revolución tecnológica.
+                  esenciales del <em> Big Data</em>. Utilizando ejemplos y
+                  códigos, se descubrirá cómo los datos masivos están dando
+                  forma al futuro y cómo se puede ser parte de esta revolución
+                  tecnológica.
                 </p>
               </div>
             </div>
